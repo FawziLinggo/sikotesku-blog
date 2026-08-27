@@ -14,7 +14,7 @@ Hubungkan repo `FawziLinggo/sikotesku-blog` dari dashboard Cloudflare:
 2. Pilih **Create application** > **Import a repository**.
 3. Pilih repo GitHub `sikotesku-blog`.
 4. Pilih branch production `main`.
-5. Gunakan Node.js `22.12.0` atau versi yang lebih baru.
+5. Biarkan Workers Builds membaca `.nvmrc` dan memakai Node.js `22.23.2`.
 6. Isi build command `npm run build`.
 7. Isi deploy command `npm run deploy`.
 8. Pastikan root directory adalah root repo.

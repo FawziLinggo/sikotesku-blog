@@ -15,7 +15,9 @@ Cloudflare.
 
 ## Local Development
 
-Persyaratan: Node.js `>=22.12.0` dan npm `>=9.6.5`.
+Persyaratan: Node.js `>=22.19.0` dan npm `>=9.6.5`. File `.nvmrc`
+memakai Node.js `22.23.2`, versi Node 22 yang tersedia langsung pada build image
+Cloudflare Workers Builds.
 
 ```bash
 npm install
