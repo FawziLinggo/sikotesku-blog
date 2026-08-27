@@ -1,0 +1,57 @@
+---
+import ArticleCard from "../../components/ArticleCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts } from "../../utils/posts";
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout
+  title="Tim Sikotesku: Penulis dan Reviewer"
+  description="Kenali Tim Sikotesku yang menulis dan meninjau panduan psikotes kerja, CV, dan interview untuk pencari kerja Indonesia."
+>
+  <section class="page-hero">
+    <div class="shell page-hero-inner">
+      <div>
+        <p class="eyebrow">Penulis & reviewer</p>
+        <h1>Tim Sikotesku</h1>
+        <p>
+          Tim produk dan editorial yang menerjemahkan kebutuhan latihan menjadi
+          panduan praktis, dengan batas privasi dan klaim yang dijaga secara terbuka.
+        </p>
+        <div class="topic-page-meta">
+          <span class="meta-pill">{posts.length} artikel</span>
+          <span class="meta-pill">Psikotes & karier</span>
+          <span class="meta-pill">Review manusia</span>
+        </div>
+      </div>
+      <div class="page-hero-mark">TS</div>
+    </div>
+  </section>
+
+  <section class="content-section surface-section">
+    <div class="shell">
+      <div class="prose-card">
+        <h2>Cara kami bekerja</h2>
+        <p>
+          Artikel ditulis untuk membantu pembaca memahami langkah berikutnya,
+          bukan untuk menggantikan psikolog, recruiter, atau proses seleksi resmi.
+          Setiap contoh dibuat sintetis dan link produk diperiksa agar mengarah ke
+          halaman Sikotesku yang benar.
+        </p>
+        <p>
+          Lihat <a href="/kebijakan-editorial/">kebijakan editorial</a> untuk
+          mengetahui batas klaim, penggunaan AI, koreksi, dan perlindungan data.
+        </p>
+      </div>
+
+      <div class="section-heading" style="margin-top: 3rem;">
+        <p class="eyebrow">Artikel terbaru</p>
+        <h2>Ditulis untuk langsung dipraktikkan.</h2>
+      </div>
+      <div class="articles-grid">
+        {posts.slice(0, 6).map((post, index) => <ArticleCard post={post} index={index} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

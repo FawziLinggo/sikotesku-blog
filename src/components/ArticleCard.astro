@@ -1,0 +1,35 @@
+---
+import { ArrowUpRight, Clock3 } from "lucide-astro";
+import { getTopic } from "../data/site";
+import { formatDate, getPostUrl, type BlogPost } from "../utils/posts";
+
+interface Props {
+  post: BlogPost;
+  featured?: boolean;
+  index?: number;
+}
+
+const { post, featured = false, index = 0 } = Astro.props;
+const topic = getTopic(post.data.category);
+const date = post.data.updatedDate ?? post.data.publishDate;
+---
+
+<article class:list={["article-card", featured && "article-card-featured"]} data-accent={topic?.accent ?? "teal"}>
+  <a class="article-card-link" href={getPostUrl(post)} aria-label={`Baca ${post.data.title}`}>
+    <div class="article-card-topline">
+      <span class="topic-label">{topic?.label}</span>
+      <span class="article-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+    </div>
+
+    <div class="article-card-body">
+      <h3>{post.data.title}</h3>
+      <p>{post.data.description}</p>
+    </div>
+
+    <div class="article-card-meta">
+      <span>{formatDate(date)}</span>
+      <span class="reading-time"><Clock3 size={14} aria-hidden="true" /> {post.data.readingMinutes} menit</span>
+      <span class="card-arrow"><ArrowUpRight size={18} strokeWidth={2.4} aria-hidden="true" /></span>
+    </div>
+  </a>
+</article>

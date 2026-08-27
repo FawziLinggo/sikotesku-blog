@@ -1,0 +1,86 @@
+---
+import { ArrowRight, CheckCircle2 } from "lucide-astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../data/site";
+---
+
+<BaseLayout
+  title="Tentang Panduan Sikotesku"
+  description="Kenali tujuan Panduan Sikotesku, prinsip penulisan kami, dan komitmen membantu pencari kerja berlatih secara lebih terarah."
+>
+  <section class="page-hero">
+    <div class="shell page-hero-inner">
+      <div>
+        <p class="eyebrow">Tentang kami</p>
+        <h1>Persiapan kerja harus terasa lebih dekat.</h1>
+        <p>
+          Panduan Sikotesku dibuat untuk menjembatani jarak antara "saya harus
+          belajar apa?" dan tindakan kecil yang benar-benar bisa dilakukan dari HP.
+        </p>
+      </div>
+      <div class="page-hero-mark">S</div>
+    </div>
+  </section>
+
+  <section class="content-section surface-section">
+    <div class="shell founder-panel">
+      <div class="founder-portrait">
+        <img src="/founder/fawzi-linggo.jpg" alt="Fawzi Linggo, pendiri Sikotesku" width="720" height="900" />
+      </div>
+      <div class="founder-copy">
+        <p class="eyebrow">Catatan founder</p>
+        <blockquote>
+          "Latihan psikotes seharusnya mudah dijangkau, mudah dipahami, dan membuatmu lebih percaya diri."
+        </blockquote>
+        <p>
+          Sikotesku dibangun untuk membantu pencari kerja berlatih dengan cara yang
+          lebih dekat dengan keseharian mereka - langsung dari perangkat yang sudah dimiliki.
+          Blog ini melanjutkan misi tersebut melalui penjelasan yang dapat ditemukan,
+          dibaca, dan dirujuk secara terbuka.
+        </p>
+        <span class="founder-name">{SITE.founder}</span>
+        <span class="founder-role">Founder & Product Builder Sikotesku</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Komitmen Sikotesku</p>
+        <h2>Bukan sekadar mengejar lebih banyak artikel.</h2>
+        <p>Kami ingin setiap halaman punya alasan yang jelas untuk diterbitkan.</p>
+      </div>
+      <div class="principle-grid">
+        <article class="principle-card">
+          <span class="principle-number">01</span>
+          <h3>Aman digunakan dari HP</h3>
+          <p>Struktur, ukuran teks, dan navigasi dimulai dari kebutuhan layar kecil.</p>
+        </article>
+        <article class="principle-card">
+          <span class="principle-number">02</span>
+          <h3>Informasi yang transparan</h3>
+          <p>Fungsi latihan dijelaskan tanpa janji lolos atau klaim psikologis berlebihan.</p>
+        </article>
+        <article class="principle-card">
+          <span class="principle-number">03</span>
+          <h3>Bertumbuh dari kebutuhan nyata</h3>
+          <p>Topik dipilih dari pertanyaan pencari kerja, fresh graduate, BKK, dan mitra.</p>
+        </article>
+      </div>
+
+      <div class="prose-card" style="margin-top: 1rem;">
+        <h2>Apa yang bisa kamu harapkan?</h2>
+        <ul>
+          <li><CheckCircle2 size={15} aria-hidden="true" /> Panduan psikotes kerja tanpa membocorkan materi tes.</li>
+          <li><CheckCircle2 size={15} aria-hidden="true" /> Strategi latihan yang dapat diterapkan secara bertahap.</li>
+          <li><CheckCircle2 size={15} aria-hidden="true" /> Persiapan CV dan interview dengan contoh sintetis.</li>
+          <li><CheckCircle2 size={15} aria-hidden="true" /> Tautan langsung menuju latihan Sikotesku yang relevan.</li>
+        </ul>
+        <a class="button button-dark" href={SITE.practiceUrl}>
+          Mulai dari latihan gratis <ArrowRight size={16} aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import { ArrowLeft, Compass } from "lucide-astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Halaman Tidak Ditemukan"
+  description="Halaman yang kamu cari tidak tersedia di Panduan Sikotesku."
+  noindex
+>
+  <section class="not-found">
+    <div class="shell">
+      <div class="not-found-card">
+        <span class="not-found-code"><Compass size={23} aria-hidden="true" /></span>
+        <h1>Arahnya sedikit meleset.</h1>
+        <p>
+          Halaman ini mungkin dipindahkan atau alamatnya tidak lengkap. Kembali ke
+          beranda dan pilih topik yang ingin kamu pelajari.
+        </p>
+        <div class="not-found-actions">
+          <a class="button button-dark" href="/"><ArrowLeft size={16} aria-hidden="true" /> Kembali ke beranda</a>
+          <a class="button button-ghost" href="/topik/">Lihat semua topik</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

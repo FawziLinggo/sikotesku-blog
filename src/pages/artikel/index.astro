@@ -1,0 +1,38 @@
+---
+import ArticleCard from "../../components/ArticleCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts } from "../../utils/posts";
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout
+  title="Semua Artikel Psikotes Kerja dan Karier"
+  description="Baca semua artikel Panduan Sikotesku tentang psikotes kerja, latihan angka, penalaran, ketelitian, CV, dan interview."
+>
+  <section class="page-hero">
+    <div class="shell page-hero-inner">
+      <div>
+        <p class="eyebrow">Arsip panduan</p>
+        <h1>Semua artikel, satu tempat.</h1>
+        <p>
+          Pilih artikel berdasarkan kebutuhanmu. Setiap panduan dirancang untuk
+          dibaca singkat lalu langsung dipraktikkan.
+        </p>
+        <div class="topic-page-meta">
+          <span class="meta-pill">{posts.length} artikel</span>
+          <span class="meta-pill">Diperbarui bertahap</span>
+        </div>
+      </div>
+      <div class="page-hero-mark">{String(posts.length).padStart(2, "0")}</div>
+    </div>
+  </section>
+
+  <section class="content-section surface-section">
+    <div class="shell">
+      <div class="articles-grid">
+        {posts.map((post, index) => <ArticleCard post={post} index={index} featured={index === 0} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,123 @@
+---
+import "@fontsource-variable/plus-jakarta-sans";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { SITE } from "../data/site";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: "website" | "article";
+  noindex?: boolean;
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  canonical = Astro.url.pathname,
+  image = "/brand/og-sikotesku.png",
+  type = "website",
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+  structuredData,
+} = Astro.props;
+
+const canonicalUrl = new URL(canonical, SITE.url).toString();
+const imageUrl = new URL(image, SITE.url).toString();
+const pageTitle = title === SITE.title || title.includes("| Sikotesku") ? title : `${title} | Sikotesku`;
+
+const baseSchemas: Array<Record<string, unknown>> = [
+  {
+    "@type": "Organization",
+    "@id": `${SITE.mainUrl}/#organization`,
+    name: SITE.brand,
+    url: SITE.mainUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand/icon-512.png`,
+      width: 512,
+      height: 512,
+    },
+    founder: {
+      "@type": "Person",
+      name: SITE.founder,
+    },
+  },
+  {
+    "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
+    url: SITE.url,
+    name: SITE.name,
+    description: SITE.description,
+    inLanguage: "id-ID",
+    publisher: { "@id": `${SITE.mainUrl}/#organization` },
+  },
+];
+
+const pageSchemas = structuredData
+  ? Array.isArray(structuredData)
+    ? structuredData
+    : [structuredData]
+  : [];
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [...baseSchemas, ...pageSchemas],
+};
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="application-name" content={SITE.name} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Panduan Sikotesku" href={`${SITE.url}/rss.xml`} />
+    <link rel="icon" href="/brand/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/brand/favicon.png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sikotesku, latihan psikotes kerja online dari HP" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Lewati ke konten</a>
+    <SiteHeader />
+    <main id="main-content">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

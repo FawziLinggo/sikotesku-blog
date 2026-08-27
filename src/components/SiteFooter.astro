@@ -1,0 +1,64 @@
+---
+import { ArrowUpRight, Rss } from "lucide-astro";
+import { SITE, TOPICS } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <section class="footer-brand" aria-labelledby="footer-brand-title">
+      <a class="brand-link brand-link-footer" href="/">
+        <img src="/brand/icon-192.png" width="44" height="44" alt="" />
+        <span class="brand-copy">
+          <span>Panduan</span>
+          <strong id="footer-brand-title">sikotesku<span>.com</span></strong>
+        </span>
+      </a>
+      <p>
+        Panduan praktis untuk membantu fresh graduate dan pencari kerja berlatih
+        lebih terarah, langsung dari perangkat yang mereka miliki.
+      </p>
+      <p class="footer-note">Media edukasi dan latihan, bukan alat diagnosis psikologis.</p>
+    </section>
+
+    <section>
+      <h2>Topik</h2>
+      <div class="footer-links">
+        {TOPICS.slice(0, 4).map((topic) => (
+          <a href={`/topik/${topic.slug}/`}>{topic.label}</a>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2>Sikotesku</h2>
+      <div class="footer-links">
+        <a href="/artikel/">Semua artikel</a>
+        <a href="/tentang/">Tentang kami</a>
+        <a href="/kebijakan-editorial/">Kebijakan editorial</a>
+        <a href="/penulis/tim-sikotesku/">Tim penulis</a>
+        <a class="footer-rss" href="/rss.xml">
+          <Rss size={14} aria-hidden="true" /> RSS
+        </a>
+      </div>
+    </section>
+
+    <section class="footer-action">
+      <h2>Siap mencoba?</h2>
+      <p>Baca secukupnya, lalu ubah pemahaman menjadi latihan yang konsisten.</p>
+      <a class="button button-teal" href={SITE.practiceUrl}>
+        Buka latihan gratis
+        <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
+      </a>
+    </section>
+  </div>
+
+  <div class="shell footer-bottom">
+    <p>(c) {year} Sikotesku. Semua hak dilindungi.</p>
+    <div>
+      <a href={`${SITE.mainUrl}/terms-and-conditions`}>Syarat & ketentuan</a>
+      <a href={SITE.mainUrl}>sikotesku.com</a>
+    </div>
+  </div>
+</footer>

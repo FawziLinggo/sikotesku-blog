@@ -1,0 +1,51 @@
+---
+import ArticleCard from "../../components/ArticleCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { TOPICS, type TopicSlug } from "../../data/site";
+import { getPublishedPosts } from "../../utils/posts";
+
+export function getStaticPaths() {
+  return TOPICS.map((topic) => ({ params: { topic: topic.slug }, props: { topic } }));
+}
+
+const { topic } = Astro.props as { topic: (typeof TOPICS)[number] };
+const posts = (await getPublishedPosts()).filter(
+  (post) => post.data.category === (topic.slug as TopicSlug),
+);
+---
+
+<BaseLayout
+  title={`${topic.label}: Panduan dan Tips Latihan`}
+  description={`${topic.description} Baca panduan ${topic.label} dari Tim Sikotesku dan lanjutkan ke latihan yang relevan.`}
+>
+  <section class="page-hero">
+    <div class="shell page-hero-inner">
+      <div>
+        <p class="eyebrow">Topik Sikotesku</p>
+        <h1>{topic.label}</h1>
+        <p>{topic.description}</p>
+        <div class="topic-page-meta">
+          <span class="meta-pill">{posts.length} artikel</span>
+          <span class="meta-pill">Bahasa Indonesia</span>
+          <span class="meta-pill">Dibaca dari HP</span>
+        </div>
+      </div>
+      <div class="page-hero-mark">{topic.symbol}</div>
+    </div>
+  </section>
+
+  <section class="content-section surface-section">
+    <div class="shell">
+      {posts.length > 0 ? (
+        <div class="articles-grid">
+          {posts.map((post, index) => <ArticleCard post={post} index={index} featured={index === 0} />)}
+        </div>
+      ) : (
+        <div class="empty-state">
+          <h2>Panduan sedang disiapkan</h2>
+          <p>Topik ini sudah ada dalam peta konten dan akan diisi secara bertahap.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

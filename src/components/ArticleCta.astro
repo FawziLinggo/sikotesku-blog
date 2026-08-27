@@ -1,0 +1,24 @@
+---
+import { ArrowRight, Sparkles } from "lucide-astro";
+
+interface Props {
+  label: string;
+  href: string;
+  description: string;
+}
+
+const { label, href, description } = Astro.props;
+---
+
+<aside class="article-cta" aria-label="Lanjutkan ke latihan Sikotesku">
+  <div class="article-cta-icon"><Sparkles size={20} aria-hidden="true" /></div>
+  <div>
+    <span class="eyebrow eyebrow-light">Lanjutkan dengan praktik</span>
+    <h2>Ubah bacaan ini menjadi langkah kecil hari ini.</h2>
+    <p>{description}</p>
+  </div>
+  <a class="button button-teal" href={href}>
+    {label}
+    <ArrowRight size={16} strokeWidth={2.5} aria-hidden="true" />
+  </a>
+</aside>

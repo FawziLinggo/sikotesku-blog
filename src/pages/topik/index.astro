@@ -1,0 +1,48 @@
+---
+import { ArrowRight } from "lucide-astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { TOPICS } from "../../data/site";
+import { getPublishedPosts } from "../../utils/posts";
+
+const posts = await getPublishedPosts();
+const counts = Object.fromEntries(
+  TOPICS.map((topic) => [topic.slug, posts.filter((post) => post.data.category === topic.slug).length]),
+);
+---
+
+<BaseLayout
+  title="Topik Psikotes Kerja dan Persiapan Karier"
+  description="Pilih panduan Sikotesku tentang psikotes kerja, Kraepelin, Matematika Dasar, TIU / CFIT, ketelitian, CV, dan interview."
+>
+  <section class="page-hero">
+    <div class="shell page-hero-inner">
+      <div>
+        <p class="eyebrow">Peta belajar</p>
+        <h1>Pilih topik yang paling kamu butuhkan.</h1>
+        <p>
+          Mulai dari satu cluster, baca fondasinya, lalu lanjutkan ke latihan.
+          Kamu tidak harus mempelajari semua hal sekaligus.
+        </p>
+      </div>
+      <div class="page-hero-mark">06</div>
+    </div>
+  </section>
+
+  <section class="content-section surface-section">
+    <div class="shell topic-grid">
+      {TOPICS.map((topic) => (
+        <a class="topic-card" data-accent={topic.accent} href={`/topik/${topic.slug}/`}>
+          <div class="topic-card-top">
+            <span class="topic-card-symbol">{topic.symbol}</span>
+            <span class="topic-card-count">{counts[topic.slug]} artikel</span>
+          </div>
+          <div class="topic-card-copy">
+            <h3>{topic.label}</h3>
+            <p>{topic.description}</p>
+            <span class="section-link">Buka topik <ArrowRight size={15} aria-hidden="true" /></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
