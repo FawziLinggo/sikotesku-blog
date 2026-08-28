@@ -23,13 +23,12 @@ const posts = await getPublishedPosts();
           <span class="meta-pill">{posts.length} artikel</span>
           <span class="meta-pill">Diperbarui bertahap</span>
         </div>
-        <form class="search-shortcut" action="/cari/" method="get" role="search">
+        <form class="search-shortcut" id="article-search-shortcut" action="/cari/" role="search">
           <label for="article-search-query">Cari berdasarkan topik atau pertanyaan</label>
           <div class="search-shortcut-field">
             <Search size={17} strokeWidth={2.2} aria-hidden="true" />
             <input
               id="article-search-query"
-              name="q"
               type="search"
               placeholder="Contoh: Kraepelin atau interview"
               autocomplete="off"
@@ -48,4 +47,15 @@ const posts = await getPublishedPosts();
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    document.querySelector("#article-search-shortcut")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = document.querySelector("#article-search-query");
+      const query = input instanceof HTMLInputElement ? input.value.trim() : "";
+      const target = new URL("/cari/", window.location.origin);
+      target.hash = query ? new URLSearchParams({ q: query }).toString() : "";
+      window.location.assign(target.toString());
+    });
+  </script>
 </BaseLayout>

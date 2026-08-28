@@ -43,7 +43,6 @@ const devIndex = posts.map((post) => ({
               <Search size={17} strokeWidth={2.2} aria-hidden="true" />
               <input
                 id="dev-search-query"
-                name="q"
                 type="search"
                 placeholder="Contoh: Kraepelin atau interview"
                 autocomplete="off"
@@ -56,7 +55,8 @@ const devIndex = posts.map((post) => ({
       )}
 
       <p class="search-privacy-note">
-        Tidak ada kata kunci yang dikirim ke database atau API Sikotesku.
+        Kata kunci tetap di perangkatmu dan tidak dikirim ke Cloudflare, database,
+        atau API Sikotesku.
       </p>
     </div>
   </section>
@@ -69,8 +69,12 @@ const devIndex = posts.map((post) => ({
           showSubResults: false,
           showImages: false,
         });
-        const query = new URLSearchParams(window.location.search).get("q")?.trim();
-        if (query) search.triggerSearch(query);
+        const readQuery = () =>
+          new URLSearchParams(window.location.hash.slice(1)).get("q")?.trim() ?? "";
+        const runHashSearch = () => search.triggerSearch(readQuery());
+
+        runHashSearch();
+        window.addEventListener("hashchange", runHashSearch);
       });
     </script>
   ) : (
@@ -116,14 +120,16 @@ const devIndex = posts.map((post) => ({
         `;
       }
 
-      const initialQuery = new URLSearchParams(window.location.search).get("q") ?? "";
+      const readQuery = () => new URLSearchParams(window.location.hash.slice(1)).get("q") ?? "";
+      const initialQuery = readQuery();
       input.value = initialQuery;
       renderResults(initialQuery);
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         const query = input.value.trim();
         const url = new URL(window.location.href);
-        query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+        url.search = "";
+        url.hash = query ? new URLSearchParams({ q: query }).toString() : "";
         window.history.replaceState({}, "", url);
         renderResults(query);
       });
