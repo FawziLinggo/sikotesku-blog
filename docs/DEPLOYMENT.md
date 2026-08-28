@@ -58,6 +58,14 @@ Periksa juga canonical, `og:image`, JSON-LD, `X-Robots-Tag` pada hostname
 `workers.dev`, dan apakah AI Crawl Control atau WAF memblokir crawler yang ingin
 diberi akses.
 
+## Build Tidak Terpicu Setelah Push
+
+Jika project menampilkan status disconnected meskipun nama repo masih terlihat,
+periksa GitHub **Settings > Applications > Installed GitHub Apps > Cloudflare
+Workers and Pages**. Pastikan `FawziLinggo/sikotesku-blog` termasuk dalam
+repository access. Perubahan izin tidak memutar ulang push lama; buat commit baru
+setelah koneksi pulih agar automatic build menerima event dari branch `main`.
+
 ## Rollback
 
 Rollback dilakukan dari deployment/version history Cloudflare atau dengan revert
