@@ -1,11 +1,13 @@
 ---
-import { ArrowUpRight, Menu } from "lucide-astro";
+import ArrowUpRight from "lucide-astro/ArrowUpRight";
+import Menu from "lucide-astro/Menu";
 import { SITE } from "../data/site";
 
 const pathname = Astro.url.pathname;
 const links = [
   { href: "/", label: "Beranda" },
   { href: "/artikel/", label: "Artikel" },
+  { href: "/cari/", label: "Cari" },
   { href: "/topik/", label: "Topik" },
   { href: "/tentang/", label: "Tentang" },
 ];
@@ -36,12 +38,12 @@ function isActive(href: string) {
 
     <a class="button button-dark header-cta" href={SITE.practiceUrl}>
       Mulai latihan
-      <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
+      <ArrowUpRight size={15} strokeWidth={2.4} aria-hidden="true" />
     </a>
 
     <details class="mobile-menu">
       <summary aria-label="Buka menu">
-        <Menu size={21} strokeWidth={2.4} aria-hidden="true" />
+        <Menu size={19} strokeWidth={2.3} aria-hidden="true" />
       </summary>
       <nav aria-label="Navigasi mobile">
         {links.map((link) => (
@@ -51,7 +53,7 @@ function isActive(href: string) {
         ))}
         <a class="mobile-practice-link" href={SITE.practiceUrl}>
           Mulai latihan
-          <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
+          <ArrowUpRight size={15} strokeWidth={2.4} aria-hidden="true" />
         </a>
       </nav>
     </details>

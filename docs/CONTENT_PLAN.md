@@ -15,7 +15,7 @@ bukan memproduksi halaman tipis demi kata kunci.
 | Ketelitian | Mengurangi kesalahan sederhana | Simulasi Ketelitian |
 | Karier | Menyiapkan CV dan interview | CVKu / InterviewKu |
 
-## Artikel yang Sudah Disiapkan
+## Artikel Pilar yang Sudah Ada
 
 - Apa Itu Psikotes Kerja? Jenis, Tujuan, dan Cara Persiapannya
 - Rencana Latihan Psikotes 7 Hari untuk Fresh Graduate
@@ -27,6 +27,26 @@ bukan memproduksi halaman tipis demi kata kunci.
 - Cara Membuat CV Fresh Graduate yang Ringkas dan Relevan
 - Cara Menjawab Ceritakan Tentang Diri Anda Saat Interview
 - Checklist Interview Online agar Lebih Siap dan Tidak Panik
+
+## Batch Editorial Berikutnya
+
+Batch B-001 sampai B-011 menambah 80 artikel spesifik Sikotesku. B-012 menambah
+10 artikel gap filler umum, sehingga repo memiliki tepat 100 artikel publik.
+Topiknya mencakup free practice, Mode Battle,
+ranking dan pemegang rekor live, credit dan refund, timer Battle, pemulihan
+koneksi, keypad serta ritme Kraepelin, kategori dan mode Matdas, TIU reguler,
+CFIT Figural, tiga kategori Ketelitian, alur dan privasi Wartegg, status serta
+peta belajar CPNS, simulasi dari HP, Riwayat, Mode Individu, Room, program
+Karier 31, jalur persiapan kerja, paket, CV tersimpan, laporan perkembangan,
+CVKu AI/Pakar, InterviewKu AI/Pakar, TesVerbalKu, Mitra, lowongan, referral,
+Hadiah, pembayaran, preferensi email, penghapusan akun, dan Updates.
+
+Audit source-only final mencocokkan seluruh 100 intent dengan file, memastikan
+metadata unik, CTA HTTPS, kategori valid, serta 243 internal link yang tidak
+putus. Harga, promo, slot, rank, dan benefit tetap diarahkan ke halaman live.
+Status detail per slug ada di
+`docs/editorial/ARTICLE_MAP.md`;
+checkpoint sumber dan review ada di `docs/editorial/CHECKPOINTS.md`.
 
 ## Ritme Publikasi yang Disarankan
 

@@ -65,3 +65,5 @@ Gunakan latihan untuk memahami kebiasaanmu sendiri: apakah kamu sering kehilanga
 ## Kesimpulan
 
 Kraepelin dan Pauli memiliki kemiripan pada tugas angka berulang, tetapi nama dan format tidak selalu konsisten. Kenali instruksi yang aktual, latih ritme dan ketelitian, serta jaga kondisi fisik saat pelaksanaan. Simulator online dapat membantu membangun kebiasaan, bukan menggantikan tes resmi atau menjadi diagnosis psikologis.
+
+Jika ingin memahami format latihan Sikotesku yang lebih spesifik, baca [tes Kraepelin dan cara berlatih](/artikel/tes-kraepelin-cara-latihan/).

@@ -9,3 +9,8 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Local design-agent tooling; it is not part of the static site artifact.
+.agents/
+.claude/
+.codex/

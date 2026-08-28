@@ -89,6 +89,8 @@ Simulator membantu membiasakan format dan ritme. Ia bukan salinan tes perusahaan
 
 Persiapan yang baik terasa lebih sederhana: pahami bentuk tugas, latihan secara bertahap, evaluasi kebiasaan, lalu istirahat. Kamu tidak perlu menyelesaikan semua hal dalam satu hari.
 
+Jika membutuhkan jadwal yang lebih konkret, gunakan [rencana latihan psikotes 7 hari](/artikel/rencana-latihan-psikotes-7-hari/) sebagai titik awal.
+
 ## Ringkasnya
 
 Psikotes kerja dipakai sebagai salah satu bahan pertimbangan dalam proses seleksi. Tidak ada satu trik yang berlaku untuk semua perusahaan. Mulailah dari format yang paling mungkin kamu temui, gunakan latihan singkat yang konsisten, dan tetap jujur ketika mengerjakan kuesioner atau pertanyaan tentang cara kerja.

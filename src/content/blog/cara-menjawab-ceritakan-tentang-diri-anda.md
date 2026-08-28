@@ -83,3 +83,5 @@ Rekam suara atau minta orang tepercaya mendengarkan. Evaluasi tiga hal:
 Ulangi sampai alurnya nyaman, bukan sampai setiap kata identik. Interview yang baik memberi ruang untuk percakapan.
 
 Jawaban pembuka tidak harus sempurna. Ia hanya perlu jujur, ringkas, dan memberi alasan bagi recruiter untuk menggali pengalamanmu lebih lanjut.
+
+Untuk pertanyaan berbasis pengalaman, lanjutkan dengan [metode STAR](/artikel/metode-star-jawaban-interview/) agar ceritamu lebih runtut.

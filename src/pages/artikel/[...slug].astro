@@ -1,5 +1,8 @@
 ---
-import { ChevronRight, Clock3, Info, RefreshCcw } from "lucide-astro";
+import ChevronRight from "lucide-astro/ChevronRight";
+import Clock3 from "lucide-astro/Clock3";
+import Info from "lucide-astro/Info";
+import RefreshCcw from "lucide-astro/RefreshCcw";
 import { render } from "astro:content";
 import ArticleCard from "../../components/ArticleCard.astro";
 import ArticleCta from "../../components/ArticleCta.astro";
@@ -89,8 +92,7 @@ const breadcrumbSchema = {
       </ol>
 
       <div class="article-title-wrap">
-        <p class="eyebrow">{topic?.label}</p>
-        <h1>{post.data.title}</h1>
+        <h1 data-pagefind-meta="title">{post.data.title}</h1>
         <p class="article-deck">{post.data.description}</p>
         <div class="article-byline">
           <a href="/penulis/tim-sikotesku/">{post.data.author}</a>
@@ -119,11 +121,11 @@ const breadcrumbSchema = {
       <ArticleCta {...post.data.cta} />
 
       {relatedPosts.length > 0 && (
-        <section class="related-articles" aria-labelledby="related-title">
+        <section class="related-articles" aria-labelledby="related-title" data-pagefind-ignore>
           <h2 id="related-title">Lanjutkan topik ini</h2>
           <div class="articles-grid">
-            {relatedPosts.map((relatedPost, index) => (
-              <ArticleCard post={relatedPost} index={index} />
+            {relatedPosts.map((relatedPost) => (
+              <ArticleCard post={relatedPost} />
             ))}
           </div>
         </section>
@@ -131,7 +133,7 @@ const breadcrumbSchema = {
     </article>
 
     {tocHeadings.length > 0 && (
-      <aside class="article-sidebar">
+      <aside class="article-sidebar" data-pagefind-ignore>
         <nav class="article-toc" aria-label="Daftar isi artikel">
           <h2>Isi artikel</h2>
           <ol>

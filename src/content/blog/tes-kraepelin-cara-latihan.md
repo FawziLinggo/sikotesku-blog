@@ -91,3 +91,5 @@ Latihan Kraepelin dapat membantu membiasakan diri dengan tugas berulang, tetapi 
 Datang atau masuk ke sesi lebih awal, siapkan alat tulis jika diperlukan, dan pastikan kamu memahami instruksi sebelum timer berjalan. Jika ada bagian yang tidak jelas, tanyakan kepada penyelenggara. Mengandalkan asumsi dari latihan online justru berisiko.
 
 Kraepelin akan terasa lebih terkelola ketika kamu memandangnya sebagai rangkaian langkah kecil: lihat, hitung, tulis, lanjutkan. Cari ritme yang konsisten, bukan kecepatan yang hanya bertahan beberapa detik.
+
+Pelajari juga [cara membangun ritme Kraepelin](/artikel/membangun-ritme-kraepelin/) untuk mengevaluasi tempo tanpa mengejar angka semata.

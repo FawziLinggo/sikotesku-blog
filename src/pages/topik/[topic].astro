@@ -21,7 +21,6 @@ const posts = (await getPublishedPosts()).filter(
   <section class="page-hero">
     <div class="shell page-hero-inner">
       <div>
-        <p class="eyebrow">Topik Sikotesku</p>
         <h1>{topic.label}</h1>
         <p>{topic.description}</p>
         <div class="topic-page-meta">
@@ -30,7 +29,6 @@ const posts = (await getPublishedPosts()).filter(
           <span class="meta-pill">Dibaca dari HP</span>
         </div>
       </div>
-      <div class="page-hero-mark">{topic.symbol}</div>
     </div>
   </section>
 
@@ -38,7 +36,7 @@ const posts = (await getPublishedPosts()).filter(
     <div class="shell">
       {posts.length > 0 ? (
         <div class="articles-grid">
-          {posts.map((post, index) => <ArticleCard post={post} index={index} featured={index === 0} />)}
+          {posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}
         </div>
       ) : (
         <div class="empty-state">

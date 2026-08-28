@@ -15,6 +15,7 @@ interface Props {
   publishedTime?: Date;
   modifiedTime?: Date;
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+  pagefindAssets?: boolean;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   publishedTime,
   modifiedTime,
   structuredData,
+  pagefindAssets = false,
 } = Astro.props;
 
 const canonicalUrl = new URL(canonical, SITE.url).toString();
@@ -90,8 +92,9 @@ const schemaGraph = {
     <link rel="icon" href="/brand/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="/brand/favicon.png" />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-
+    {pagefindAssets && import.meta.env.PROD && (
+      <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+    )}
     <meta property="og:type" content={type} />
     <meta property="og:locale" content={SITE.locale} />
     <meta property="og:site_name" content={SITE.name} />
@@ -111,11 +114,23 @@ const schemaGraph = {
     <meta name="twitter:image" content={imageUrl} />
 
     <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)}></script>
+    {pagefindAssets && import.meta.env.PROD && (
+      <script src="/pagefind/pagefind-ui.js" defer></script>
+    )}
+    {import.meta.env.DEV && (
+      <script is:inline>
+        if ("serviceWorker" in navigator) {
+          void navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (const registration of registrations) void registration.unregister();
+          });
+        }
+      </script>
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten</a>
     <SiteHeader />
-    <main id="main-content">
+    <main id="main-content" data-pagefind-body>
       <slot />
     </main>
     <SiteFooter />

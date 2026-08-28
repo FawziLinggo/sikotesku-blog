@@ -1,13 +1,5 @@
 ---
-import {
-  ArrowRight,
-  BadgeCheck,
-  BookOpen,
-  CheckCircle2,
-  FileCheck2,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-astro";
+import ArrowRight from "lucide-astro/ArrowRight";
 import ArticleCard from "../components/ArticleCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE, TOPICS } from "../data/site";
@@ -25,7 +17,6 @@ const topicCounts = Object.fromEntries(
   <section class="home-hero">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><Sparkles size={14} aria-hidden="true" /> Panduan dari Sikotesku</p>
         <h1>Lebih paham. Lebih siap. <span>Lebih tenang.</span></h1>
         <p class="hero-lead">
           Pelajari psikotes kerja, CV, dan interview dengan penjelasan yang ringkas.
@@ -41,9 +32,9 @@ const topicCounts = Object.fromEntries(
           </a>
         </div>
         <ul class="hero-proof" aria-label="Prinsip Panduan Sikotesku">
-          <li><CheckCircle2 size={15} aria-hidden="true" /> Bahasa praktis</li>
-          <li><CheckCircle2 size={15} aria-hidden="true" /> Mobile-first</li>
-          <li><CheckCircle2 size={15} aria-hidden="true" /> Tanpa janji berlebihan</li>
+          <li>Bahasa praktis</li>
+          <li>Mobile-first</li>
+          <li>Tanpa janji berlebihan</li>
         </ul>
       </div>
 
@@ -54,7 +45,7 @@ const topicCounts = Object.fromEntries(
               <span>Peta persiapan</span>
               <strong>Dari bingung menjadi terarah</strong>
             </div>
-            <div class="journey-score">3x</div>
+            <div class="journey-score">3 langkah</div>
           </div>
 
           <div class="journey-list">
@@ -94,7 +85,6 @@ const topicCounts = Object.fromEntries(
     <div class="shell topic-strip-inner">
       {TOPICS.map((topic) => (
         <a class="topic-chip" href={`/topik/${topic.slug}/`}>
-          <span class="topic-chip-symbol">{topic.symbol}</span>
           {topic.shortLabel}
         </a>
       ))}
@@ -105,7 +95,6 @@ const topicCounts = Object.fromEntries(
     <div class="shell">
       <div class="section-heading section-heading-row">
         <div>
-          <p class="eyebrow">Pilih jalur belajar</p>
           <h2 id="topik-title">Satu kebutuhan, satu langkah awal.</h2>
         </div>
         <p>
@@ -117,13 +106,12 @@ const topicCounts = Object.fromEntries(
       <div class="topic-grid">
         {TOPICS.map((topic) => (
           <a class="topic-card" data-accent={topic.accent} href={`/topik/${topic.slug}/`}>
-            <div class="topic-card-top">
-              <span class="topic-card-symbol">{topic.symbol}</span>
-              <span class="topic-card-count">{topicCounts[topic.slug]} artikel</span>
-            </div>
             <div class="topic-card-copy">
               <h3>{topic.label}</h3>
               <p>{topic.description}</p>
+            </div>
+            <div class="topic-card-top">
+              <span class="topic-card-count">{topicCounts[topic.slug]} artikel</span>
             </div>
           </a>
         ))}
@@ -135,7 +123,6 @@ const topicCounts = Object.fromEntries(
     <div class="shell">
       <div class="section-heading section-heading-row">
         <div>
-          <p class="eyebrow"><BookOpen size={14} aria-hidden="true" /> Artikel pilihan</p>
           <h2 id="pilihan-title">Mulai dari fondasi yang benar.</h2>
         </div>
         <a class="section-link" href="/topik/">
@@ -145,8 +132,8 @@ const topicCounts = Object.fromEntries(
 
       {featuredPost ? (
         <div class="articles-grid">
-          <ArticleCard post={featuredPost} featured index={0} />
-          {latestPosts.map((post, index) => <ArticleCard post={post} index={index + 1} />)}
+          <ArticleCard post={featuredPost} featured />
+          {latestPosts.map((post) => <ArticleCard post={post} />)}
         </div>
       ) : (
         <div class="empty-state">
@@ -161,7 +148,6 @@ const topicCounts = Object.fromEntries(
     <div class="shell">
       <div class="editorial-panel">
         <div class="editorial-panel-copy">
-          <p class="eyebrow eyebrow-light"><ShieldCheck size={14} aria-hidden="true" /> Standar editorial</p>
           <h2 id="editorial-title">Membantu, bukan memberi jalan pintas palsu.</h2>
           <p>
             Kami tidak menerbitkan bocoran soal, diagnosis, atau janji kelulusan.
@@ -175,21 +161,18 @@ const topicCounts = Object.fromEntries(
 
         <div class="editorial-points">
           <div class="editorial-point">
-            <span class="editorial-point-icon"><BadgeCheck size={19} aria-hidden="true" /></span>
             <div>
               <h3>Jelas sumber dan penulisnya</h3>
               <p>Identitas penulis, tanggal terbit, dan pembaruan ditampilkan terbuka.</p>
             </div>
           </div>
           <div class="editorial-point">
-            <span class="editorial-point-icon"><FileCheck2 size={19} aria-hidden="true" /></span>
             <div>
               <h3>Contoh selalu sintetis</h3>
               <p>Tidak memakai CV, jawaban, atau hasil asesmen pengguna sebagai bahan artikel.</p>
             </div>
           </div>
           <div class="editorial-point">
-            <span class="editorial-point-icon"><ShieldCheck size={19} aria-hidden="true" /></span>
             <div>
               <h3>Klaim produk dijaga realistis</h3>
               <p>Sikotesku membantu latihan; hasil seleksi tetap dipengaruhi banyak faktor.</p>

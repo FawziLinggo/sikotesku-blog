@@ -13,7 +13,7 @@ featured: false
 draft: false
 cta:
   label: Siapkan CV-mu
-  href: https://sikotesku.com/cv-review
+  href: https://sikotesku.com/cv-review/ai
   description: Setelah merapikan isi CV, gunakan layanan review yang sesuai dengan kebutuhanmu.
 ---
 
@@ -95,3 +95,5 @@ Jangan memasukkan nomor identitas, data kesehatan, atau dokumen sensitif jika ti
 Template dapat membantu tata letak. AI dapat membantu mencari kalimat yang lebih jelas. Namun, isi akhir harus tetap berasal dari pengalamanmu dan diperiksa ulang. Jangan memasukkan CV mentah atau data sensitif ke layanan yang tidak kamu pahami kebijakan privasinya.
 
 CV adalah pintu masuk percakapan, bukan seluruh cerita kariermu. Buat pembaca mudah menemukan bukti yang relevan, lalu siapkan penjelasan yang jujur jika kamu dipanggil interview.
+
+Sebelum mengirim, baca [mitos ATS dan cara membuat CV mudah dipindai](/artikel/mitos-ats-dan-cv-mudah-dipindai/) agar penyesuaian format tetap realistis.

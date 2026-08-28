@@ -81,3 +81,5 @@ CFIT memiliki sejarah dan aturan pengadministrasian tertentu. Versi, subtes, wak
 ## Ringkasnya
 
 TIU dan CFIT dapat memiliki kemiripan pada latihan penalaran, tetapi labelnya tidak menjamin format yang identik. Kenali aturan resmi, pecah pola menjadi bagian kecil, dan evaluasi proses berpikirmu. Gunakan simulator sebagai latihan kebiasaan, bukan diagnosis atau jaminan lolos seleksi.
+
+Untuk melihat pilihan kategori pada platform, buka [kategori TIU dan CFIT Sikotesku](/artikel/kategori-tiu-cfit-sikotesku/).

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist --glob \"artikel/*/index.html\" --force-language id --quiet",
     "preview": "astro preview",
     "deploy": "wrangler deploy"
   },
@@ -21,6 +21,7 @@
     "lucide-astro": "0.556.0"
   },
   "devDependencies": {
+    "pagefind": "1.5.2",
     "wrangler": "4.127.0"
   }
 }

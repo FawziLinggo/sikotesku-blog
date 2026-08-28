@@ -6,6 +6,10 @@ Blog ini memakai Astro output `static` dan Cloudflare Workers Static Assets.
 `wrangler.jsonc` tidak memiliki Worker entrypoint atau `run_worker_first`, sehingga
 file yang sudah dibangun dapat dilayani sebagai asset edge tanpa request handler.
 
+Perintah build juga membuat indeks Pagefind dari halaman artikel. File indeks
+masuk ke `dist/pagefind/`, dilayani sebagai static asset CDN, dan pencarian
+berjalan di browser. Tidak ada Worker, D1, KV, atau API yang dipanggil per kueri.
+
 ## Workers Builds
 
 Hubungkan repo `FawziLinggo/sikotesku-blog` dari dashboard Cloudflare:
@@ -39,6 +43,8 @@ Jangan mengubah routing `sikotesku.com` utama untuk blog ini pada tahap awal.
 ```text
 GET /                         -> 200
 GET /artikel/                 -> 200
+GET /cari/                   -> 200
+GET /pagefind/pagefind.js    -> 200
 GET /artikel/<slug>/         -> 200
 GET /topik/                   -> 200
 GET /robots.txt               -> 200

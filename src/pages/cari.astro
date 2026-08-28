@@ -1,0 +1,132 @@
+---
+import Search from "lucide-astro/Search";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPostUrl, getPublishedPosts } from "../utils/posts";
+
+const posts = await getPublishedPosts();
+const devIndex = posts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  url: getPostUrl(post),
+  terms: [post.data.title, post.data.description, ...post.data.tags]
+    .join(" ")
+    .toLocaleLowerCase("id-ID"),
+}));
+---
+
+<BaseLayout
+  title="Cari Artikel Psikotes dan Karier"
+  description="Cari artikel Panduan Sikotesku tentang psikotes kerja, Kraepelin, Matdas, TIU / CFIT, ketelitian, CV, dan interview."
+  pagefindAssets
+>
+  <section class="page-hero search-hero" data-pagefind-ignore>
+    <div class="shell page-hero-inner">
+      <div>
+        <h1>Cari panduan yang kamu butuhkan.</h1>
+        <p>
+          Ketik topik atau pertanyaan singkat. Indeks diunduh dari CDN dan proses
+          pencarian berjalan langsung di perangkatmu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section search-section" data-pagefind-ignore>
+    <div class="shell search-shell">
+      {import.meta.env.PROD ? (
+        <div id="article-search" class="article-search" aria-label="Pencarian artikel"></div>
+      ) : (
+        <div class="dev-search">
+          <form class="search-shortcut" id="dev-search-form" role="search">
+            <label for="dev-search-query">Cari berdasarkan topik atau pertanyaan</label>
+            <div class="search-shortcut-field">
+              <Search size={17} strokeWidth={2.2} aria-hidden="true" />
+              <input
+                id="dev-search-query"
+                name="q"
+                type="search"
+                placeholder="Contoh: Kraepelin atau interview"
+                autocomplete="off"
+              />
+              <button type="submit">Cari</button>
+            </div>
+          </form>
+          <div id="dev-search-results" class="dev-search-results" aria-live="polite"></div>
+        </div>
+      )}
+
+      <p class="search-privacy-note">
+        Tidak ada kata kunci yang dikirim ke database atau API Sikotesku.
+      </p>
+    </div>
+  </section>
+
+  {import.meta.env.PROD ? (
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        const search = new window.PagefindUI({
+          element: "#article-search",
+          showSubResults: false,
+          showImages: false,
+        });
+        const query = new URLSearchParams(window.location.search).get("q")?.trim();
+        if (query) search.triggerSearch(query);
+      });
+    </script>
+  ) : (
+    <script define:vars={{ devIndex }} is:inline>
+      const form = document.querySelector("#dev-search-form");
+      const input = document.querySelector("#dev-search-query");
+      const results = document.querySelector("#dev-search-results");
+
+      const escapeHtml = (value) => value.replace(/[&<>'"]/g, (character) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;",
+      })[character]);
+
+      function renderResults(query) {
+        const normalized = query.trim().toLocaleLowerCase("id-ID");
+        const matches = normalized
+          ? devIndex.filter((item) => item.terms.includes(normalized)).slice(0, 20)
+          : [];
+
+        if (!normalized) {
+          results.innerHTML = '<p class="search-empty">Ketik minimal satu kata untuk mulai mencari.</p>';
+          return;
+        }
+
+        if (matches.length === 0) {
+          results.innerHTML = '<p class="search-empty">Belum ada artikel yang cocok. Coba kata yang lebih singkat.</p>';
+          return;
+        }
+
+        results.innerHTML = `
+          <p class="search-result-count">${matches.length} artikel ditemukan</p>
+          <ol>${matches.map((item) => `
+            <li>
+              <a href="${item.url}">
+                <strong>${escapeHtml(item.title)}</strong>
+                <span>${escapeHtml(item.description)}</span>
+              </a>
+            </li>
+          `).join("")}</ol>
+        `;
+      }
+
+      const initialQuery = new URLSearchParams(window.location.search).get("q") ?? "";
+      input.value = initialQuery;
+      renderResults(initialQuery);
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const query = input.value.trim();
+        const url = new URL(window.location.href);
+        query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+        window.history.replaceState({}, "", url);
+        renderResults(query);
+      });
+    </script>
+  )}
+</BaseLayout>

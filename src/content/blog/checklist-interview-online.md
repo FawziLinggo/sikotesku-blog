@@ -82,3 +82,5 @@ Jika panggilan terputus, gunakan kanal kontak resmi untuk memberi kabar. Jangan 
 Catat pertanyaan yang muncul, jawaban yang ingin kamu perbaiki, dan informasi tindak lanjut yang dijanjikan. Kirim ucapan terima kasih jika sesuai budaya komunikasi perusahaan, tetapi hindari mengirim pesan berulang.
 
 Checklist tidak menjamin interview berjalan sempurna. Ia hanya membuat hal-hal dasar lebih terkendali sehingga kamu dapat memusatkan perhatian pada cerita dan kemampuan yang ingin disampaikan.
+
+Gunakan [InterviewKu AI](/artikel/interviewku-ai-latihan-percakapan/) untuk mencoba jawaban sebelum sesi nyata.

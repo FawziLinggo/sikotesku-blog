@@ -13,7 +13,6 @@ const posts = await getPublishedPosts();
   <section class="page-hero">
     <div class="shell page-hero-inner">
       <div>
-        <p class="eyebrow">Penulis & reviewer</p>
         <h1>Tim Sikotesku</h1>
         <p>
           Tim produk dan editorial yang menerjemahkan kebutuhan latihan menjadi
@@ -25,7 +24,6 @@ const posts = await getPublishedPosts();
           <span class="meta-pill">Review manusia</span>
         </div>
       </div>
-      <div class="page-hero-mark">TS</div>
     </div>
   </section>
 
@@ -46,11 +44,10 @@ const posts = await getPublishedPosts();
       </div>
 
       <div class="section-heading" style="margin-top: 3rem;">
-        <p class="eyebrow">Artikel terbaru</p>
         <h2>Ditulis untuk langsung dipraktikkan.</h2>
       </div>
       <div class="articles-grid">
-        {posts.slice(0, 6).map((post, index) => <ArticleCard post={post} index={index} />)}
+        {posts.slice(0, 6).map((post) => <ArticleCard post={post} />)}
       </div>
     </div>
   </section>

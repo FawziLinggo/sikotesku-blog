@@ -80,3 +80,5 @@ Setelah sesi, catat:
 Data sederhana membuat kamu dapat melihat apakah perubahan strategi benar-benar membantu. Jangan menyimpulkan dari satu sesi saja.
 
 Ketelitian adalah kebiasaan kerja yang dapat dilatih, bukan label permanen. Beri dirimu ruang untuk memperbaiki satu sumber kesalahan pada satu waktu, dan ingat bahwa latihan online tidak menggantikan aturan tes resmi atau diagnosis psikologis.
+
+Kamu juga dapat mencoba [latihan fokus visual di sela rutinitas](/artikel/melatih-fokus-visual-harian/) dengan data sintetis.

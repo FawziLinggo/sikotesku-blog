@@ -85,3 +85,5 @@ Setelah latihan, kelompokkan kesalahan menjadi tiga:
 Catatan seperti ini membuat latihan berikutnya lebih terarah. Skor saja tidak menjelaskan apa yang harus diperbaiki.
 
 Matematika dasar dapat dilatih. Mulai dari operasi yang paling sering salah, jaga langkah tetap rapi, lalu tambahkan batas waktu secara bertahap. Hasil latihan adalah bahan evaluasi, bukan label tetap tentang kemampuanmu.
+
+Lanjutkan ke [kategori soal Matdas di Sikotesku](/artikel/kategori-soal-matdas-sikotesku/) bila ingin memilih fokus latihan yang lebih spesifik.

@@ -103,3 +103,5 @@ Jangan hanya menyimpan skor. Catat juga durasi, jumlah kesalahan yang kamu paham
 Jika kamu terus-menerus mengalami kesulitan yang membuat cemas, bicarakan kebutuhanmu dengan orang yang kamu percaya atau profesional yang sesuai. Simulator latihan bukan diagnosis psikologis.
 
 Tujuh hari yang konsisten lebih berguna daripada satu malam yang penuh tekanan. Pilih satu sesi hari ini, lalu biarkan kebiasaan kecil itu bertambah.
+
+Untuk rencana yang lebih panjang dan terhubung ke persiapan interview, lihat [rencana 30 hari psikotes sampai interview](/artikel/rencana-30-hari-psikotes-interview/).

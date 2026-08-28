@@ -1,4 +1,5 @@
 ---
+import Search from "lucide-astro/Search";
 import ArticleCard from "../../components/ArticleCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getPublishedPosts } from "../../utils/posts";
@@ -13,7 +14,6 @@ const posts = await getPublishedPosts();
   <section class="page-hero">
     <div class="shell page-hero-inner">
       <div>
-        <p class="eyebrow">Arsip panduan</p>
         <h1>Semua artikel, satu tempat.</h1>
         <p>
           Pilih artikel berdasarkan kebutuhanmu. Setiap panduan dirancang untuk
@@ -23,15 +23,28 @@ const posts = await getPublishedPosts();
           <span class="meta-pill">{posts.length} artikel</span>
           <span class="meta-pill">Diperbarui bertahap</span>
         </div>
+        <form class="search-shortcut" action="/cari/" method="get" role="search">
+          <label for="article-search-query">Cari berdasarkan topik atau pertanyaan</label>
+          <div class="search-shortcut-field">
+            <Search size={17} strokeWidth={2.2} aria-hidden="true" />
+            <input
+              id="article-search-query"
+              name="q"
+              type="search"
+              placeholder="Contoh: Kraepelin atau interview"
+              autocomplete="off"
+            />
+            <button type="submit">Cari</button>
+          </div>
+        </form>
       </div>
-      <div class="page-hero-mark">{String(posts.length).padStart(2, "0")}</div>
     </div>
   </section>
 
   <section class="content-section surface-section">
     <div class="shell">
       <div class="articles-grid">
-        {posts.map((post, index) => <ArticleCard post={post} index={index} featured={index === 0} />)}
+        {posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}
       </div>
     </div>
   </section>
