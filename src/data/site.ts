@@ -8,6 +8,7 @@ export const SITE = {
     "Panduan psikotes kerja, latihan Kraepelin, Matematika Dasar, TIU / CFIT, ketelitian, CV, dan interview untuk fresh graduate.",
   locale: "id_ID",
   author: "Tim Sikotesku",
+  authorUrl: "https://blog.sikotesku.com/penulis/tim-sikotesku/",
   founder: "Fawzi Linggo",
   practiceUrl: "https://sikotesku.com/free-practice/kraepelin",
 } as const;

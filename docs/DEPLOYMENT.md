@@ -73,12 +73,40 @@ GET /robots.txt               -> 200
 GET /sitemap-index.xml        -> 200
 GET /rss.xml                  -> 200
 GET /llms.txt                 -> 200
+GET /llms-full.txt            -> 200
 GET /alamat-yang-tidak-ada/   -> 404
 ```
 
 Periksa juga canonical, `og:image`, JSON-LD, `X-Robots-Tag` pada hostname
 `workers.dev`, dan apakah AI Crawl Control atau WAF memblokir crawler yang ingin
 diberi akses.
+
+## Discovery Search dan AI
+
+`robots.txt` mengizinkan indexing dan penggunaan konten sebagai input jawaban AI,
+menolak penggunaan untuk training, serta meminta penggunaan berbentuk referensi:
+
+```text
+Content-Signal: search=yes, ai-input=yes, ai-train=no, use=reference
+```
+
+Di dashboard zone `sikotesku.com`, periksa pengaturan berikut setelah domain blog
+aktif:
+
+1. **AI Crawl Control**: izinkan crawler search/assistant yang dibutuhkan dan
+   tetap blok crawler yang hanya dipakai untuk training.
+2. **Markdown for Agents**: aktifkan untuk `blog.sikotesku.com` jika tersedia
+   pada plan agar request `Accept: text/markdown` memperoleh representasi yang
+   lebih mudah diproses agent.
+3. **Caching > Configuration > Crawler Hints**: aktifkan agar perubahan cache
+   dapat diteruskan melalui IndexNow tanpa menambahkan runtime atau credential
+   ke repository.
+4. Pantau **AI Crawl Control > Metrics** dan tab `Robots.txt` untuk status code,
+   crawler yang diblokir, serta path yang gagal diakses.
+
+`llms.txt` adalah direktori ringkas. Daftar seluruh artikel tersedia melalui
+`llms-full.txt`; keduanya hanya pelengkap dan tidak menggantikan sitemap,
+canonical, structured data, maupun internal linking.
 
 ## Build Tidak Terpicu Setelah Push
 

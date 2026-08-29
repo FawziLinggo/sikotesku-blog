@@ -33,23 +33,31 @@ const relatedPosts = allPosts
 const tocHeadings = headings.filter((heading) => heading.depth === 2);
 
 const articleSchema = {
-  "@type": "Article",
+  "@type": "BlogPosting",
   "@id": `${SITE.url}${canonicalPath}#article`,
   headline: post.data.title,
   description: post.data.description,
   datePublished: published.toISOString(),
   dateModified: modified.toISOString(),
   inLanguage: "id-ID",
-  mainEntityOfPage: `${SITE.url}${canonicalPath}`,
+  mainEntityOfPage: { "@id": `${SITE.url}${canonicalPath}#webpage` },
+  isPartOf: { "@id": `${SITE.url}/#website` },
   image: `${SITE.url}/brand/og-sikotesku.png`,
   author: {
     "@type": "Organization",
+    "@id": `${SITE.authorUrl}#author`,
     name: post.data.author,
-    url: `${SITE.url}/penulis/tim-sikotesku/`,
+    url: SITE.authorUrl,
   },
   publisher: { "@id": `${SITE.mainUrl}/#organization` },
   articleSection: topic?.label,
   keywords: post.data.tags.join(", "),
+  about: {
+    "@type": "Thing",
+    name: topic?.label ?? post.data.category,
+    url: `${SITE.url}/topik/${post.data.category}/`,
+  },
+  mentions: post.data.tags.map((tag) => ({ "@type": "Thing", name: tag })),
 };
 
 const breadcrumbSchema = {
@@ -108,6 +116,10 @@ const breadcrumbSchema = {
 
   <div class="shell article-layout">
     <article class="article-main">
+      <section class="article-answer" aria-labelledby="answer-title">
+        <p class="article-answer-label" id="answer-title">Jawaban singkat</p>
+        <p>{post.data.description}</p>
+      </section>
       <div class="article-disclaimer">
         <Info size={17} aria-hidden="true" />
         <span>

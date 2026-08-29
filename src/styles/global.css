@@ -1091,6 +1091,32 @@ select {
   line-height: 1.8;
 }
 
+.article-answer {
+  margin-bottom: 0.75rem;
+  border: 1px solid #a9ddd8;
+  border-left: 3px solid var(--brand-dark);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 0.85rem;
+  color: #1e413d;
+  background: linear-gradient(135deg, #effbf9 0%, #f8fcfc 100%);
+}
+
+.article-answer-label {
+  margin: 0 0 0.3rem;
+  color: var(--brand-dark);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.article-answer p:last-child {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
 .article-body > :first-child {
   margin-top: 0;
 }

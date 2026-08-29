@@ -1,6 +1,6 @@
 import type { APIContext } from "astro";
 import { SITE, TOPICS } from "../data/site";
-import { getPostUrl, getPublishedPosts } from "../utils/posts";
+import { getPublishedPosts } from "../utils/posts";
 
 export const prerender = true;
 
@@ -9,10 +9,6 @@ export async function GET(_context: APIContext) {
   const topicLines = TOPICS.map(
     (topic) => `- [${topic.label}](${SITE.url}/topik/${topic.slug}/): ${topic.description}`,
   );
-  const articleLines = posts.map(
-    (post) => `- [${post.data.title}](${SITE.url}${getPostUrl(post)}): ${post.data.description}`,
-  );
-
   const body = [
     `# ${SITE.name}`,
     "",
@@ -25,15 +21,15 @@ export async function GET(_context: APIContext) {
     `- [Beranda](${SITE.url}/): Panduan terbaru dan jalur belajar utama.`,
     `- [Tentang](${SITE.url}/tentang/): Tujuan, founder, dan komitmen Sikotesku.`,
     `- [Kebijakan editorial](${SITE.url}/kebijakan-editorial/): Standar penulisan, privasi, penggunaan AI, dan koreksi.`,
+    `- [Semua artikel](${SITE.url}/artikel/): Indeks ${posts.length} panduan yang sudah diterbitkan.`,
+    `- [Daftar lengkap untuk agent](${SITE.url}/llms-full.txt): Direktori seluruh artikel beserta ringkasannya.`,
+    `- [Sitemap](${SITE.url}/sitemap-index.xml): Daftar URL kanonis untuk crawler.`,
+    `- [RSS](${SITE.url}/rss.xml): Pembaruan artikel terbaru.`,
     `- [Produk utama Sikotesku](${SITE.mainUrl}/): Latihan psikotes dan persiapan karier.`,
     "",
     "## Topik",
     "",
     ...topicLines,
-    "",
-    "## Artikel",
-    "",
-    ...articleLines,
     "",
   ].join("\n");
 

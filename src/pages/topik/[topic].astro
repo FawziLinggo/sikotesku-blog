@@ -1,8 +1,8 @@
 ---
 import ArticleCard from "../../components/ArticleCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { TOPICS, type TopicSlug } from "../../data/site";
-import { getPublishedPosts } from "../../utils/posts";
+import { SITE, TOPICS, type TopicSlug } from "../../data/site";
+import { getPostUrl, getPublishedPosts } from "../../utils/posts";
 
 export function getStaticPaths() {
   return TOPICS.map((topic) => ({ params: { topic: topic.slug }, props: { topic } }));
@@ -12,11 +12,36 @@ const { topic } = Astro.props as { topic: (typeof TOPICS)[number] };
 const posts = (await getPublishedPosts()).filter(
   (post) => post.data.category === (topic.slug as TopicSlug),
 );
+const topicPath = `/topik/${topic.slug}/`;
+const topicSchemas = [
+  {
+    "@type": "ItemList",
+    "@id": `${SITE.url}${topicPath}#articles`,
+    numberOfItems: posts.length,
+    itemListElement: posts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: post.data.title,
+      url: `${SITE.url}${getPostUrl(post)}`,
+    })),
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Beranda", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Topik", item: `${SITE.url}/topik/` },
+      { "@type": "ListItem", position: 3, name: topic.label, item: `${SITE.url}${topicPath}` },
+    ],
+  },
+];
 ---
 
 <BaseLayout
   title={`${topic.label}: Panduan dan Tips Latihan`}
   description={`${topic.description} Baca panduan ${topic.label} dari Tim Sikotesku dan lanjutkan ke latihan yang relevan.`}
+  canonical={topicPath}
+  pageSchemaType="CollectionPage"
+  structuredData={topicSchemas}
 >
   <section class="page-hero">
     <div class="shell page-hero-inner">

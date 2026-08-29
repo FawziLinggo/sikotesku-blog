@@ -1,18 +1,32 @@
 ---
 import ArrowRight from "lucide-astro/ArrowRight";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { TOPICS } from "../../data/site";
+import { SITE, TOPICS } from "../../data/site";
 import { getPublishedPosts } from "../../utils/posts";
 
 const posts = await getPublishedPosts();
 const counts = Object.fromEntries(
   TOPICS.map((topic) => [topic.slug, posts.filter((post) => post.data.category === topic.slug).length]),
 );
+const topicListSchema = {
+  "@type": "ItemList",
+  "@id": `${SITE.url}/topik/#topics`,
+  numberOfItems: TOPICS.length,
+  itemListElement: TOPICS.map((topic, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: topic.label,
+    description: topic.description,
+    url: `${SITE.url}/topik/${topic.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Topik Psikotes Kerja dan Persiapan Karier"
   description="Pilih panduan Sikotesku tentang psikotes kerja, Kraepelin, Matematika Dasar, TIU / CFIT, ketelitian, CV, dan interview."
+  pageSchemaType="CollectionPage"
+  structuredData={topicListSchema}
 >
   <section class="page-hero">
     <div class="shell page-hero-inner">

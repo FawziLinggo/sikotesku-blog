@@ -78,6 +78,10 @@ ada memakai custom 404 dengan status HTTP 404.
 - Tambahkan internal link dari `sikotesku.com` menuju blog.
 - Tinjau Cloudflare AI Crawl Control dan izinkan crawler search/assistant yang
   memang ingin diberi akses.
+- Aktifkan Crawler Hints untuk discovery melalui IndexNow tanpa menambahkan
+  credential atau runtime ke blog.
+- Jika plan mendukung, aktifkan Markdown for Agents khusus untuk
+  `blog.sikotesku.com`.
 - Pastikan hostname `workers.dev` tetap menerima `X-Robots-Tag: noindex`.
 
 ## Editorial

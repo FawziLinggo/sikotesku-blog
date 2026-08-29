@@ -1,14 +1,25 @@
 ---
 import ArticleCard from "../../components/ArticleCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../data/site";
 import { getPublishedPosts } from "../../utils/posts";
 
 const posts = await getPublishedPosts();
+const authorSchema = {
+  "@type": "Organization",
+  "@id": `${SITE.authorUrl}#author`,
+  name: SITE.author,
+  url: SITE.authorUrl,
+  description: "Tim produk dan editorial yang menulis serta meninjau Panduan Sikotesku.",
+  parentOrganization: { "@id": `${SITE.mainUrl}/#organization` },
+};
 ---
 
 <BaseLayout
   title="Tim Sikotesku: Penulis dan Reviewer"
   description="Kenali Tim Sikotesku yang menulis dan meninjau panduan psikotes kerja, CV, dan interview untuk pencari kerja Indonesia."
+  pageSchemaType="ProfilePage"
+  structuredData={authorSchema}
 >
   <section class="page-hero">
     <div class="shell page-hero-inner">

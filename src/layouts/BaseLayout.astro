@@ -11,6 +11,7 @@ interface Props {
   canonical?: string;
   image?: string;
   type?: "website" | "article";
+  pageSchemaType?: "WebPage" | "CollectionPage" | "AboutPage" | "ProfilePage";
   noindex?: boolean;
   publishedTime?: Date;
   modifiedTime?: Date;
@@ -24,6 +25,7 @@ const {
   canonical = Astro.url.pathname,
   image = "/brand/og-sikotesku.png",
   type = "website",
+  pageSchemaType = "WebPage",
   noindex = false,
   publishedTime,
   modifiedTime,
@@ -34,6 +36,17 @@ const {
 const canonicalUrl = new URL(canonical, SITE.url).toString();
 const imageUrl = new URL(image, SITE.url).toString();
 const pageTitle = title === SITE.title || title.includes("| Sikotesku") ? title : `${title} | Sikotesku`;
+
+const webPageSchema: Record<string, unknown> = {
+  "@type": pageSchemaType,
+  "@id": `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: pageTitle,
+  description,
+  inLanguage: "id-ID",
+  isPartOf: { "@id": `${SITE.url}/#website` },
+  about: { "@id": `${SITE.mainUrl}/#organization` },
+};
 
 const baseSchemas: Array<Record<string, unknown>> = [
   {
@@ -49,8 +62,16 @@ const baseSchemas: Array<Record<string, unknown>> = [
     },
     founder: {
       "@type": "Person",
+      "@id": `${SITE.mainUrl}/#founder`,
       name: SITE.founder,
     },
+  },
+  {
+    "@type": "Person",
+    "@id": `${SITE.mainUrl}/#founder`,
+    name: SITE.founder,
+    url: `${SITE.url}/tentang/`,
+    worksFor: { "@id": `${SITE.mainUrl}/#organization` },
   },
   {
     "@type": "WebSite",
@@ -60,6 +81,7 @@ const baseSchemas: Array<Record<string, unknown>> = [
     description: SITE.description,
     inLanguage: "id-ID",
     publisher: { "@id": `${SITE.mainUrl}/#organization` },
+    about: { "@id": `${SITE.mainUrl}/#organization` },
   },
 ];
 
@@ -71,7 +93,7 @@ const pageSchemas = structuredData
 
 const schemaGraph = {
   "@context": "https://schema.org",
-  "@graph": [...baseSchemas, ...pageSchemas],
+  "@graph": [...baseSchemas, webPageSchema, ...pageSchemas],
 };
 ---
 
