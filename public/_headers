@@ -5,6 +5,9 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
 
+/
+  Link: <https://blog.sikotesku.com/llms.txt>; rel="describedby"; type="text/plain"
+
 /_astro/*
   Cache-Control: public, max-age=31556952, immutable
 
