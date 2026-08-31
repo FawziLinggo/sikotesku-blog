@@ -24,7 +24,7 @@ export async function GET(_context: APIContext) {
   const body = [
     `# Direktori lengkap ${SITE.name}`,
     "",
-    `> ${posts.length} artikel publik tentang psikotes kerja, latihan, CV, interview, dan fitur Sikotesku.`,
+    `> ${posts.length} artikel publik tentang psikotes kerja, latihan CPNS, CV, interview, dan fitur Sikotesku.`,
     "",
     `Versi ringkas tersedia di ${SITE.url}/llms.txt. Gunakan URL artikel kanonis untuk membaca dan mengutip sumber asli.`,
     "",

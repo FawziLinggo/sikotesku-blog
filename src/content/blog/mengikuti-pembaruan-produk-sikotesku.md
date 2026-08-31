@@ -2,6 +2,7 @@
 title: "Cara Mengikuti Pembaruan Produk Sikotesku"
 description: "Gunakan halaman Updates untuk mengikuti fitur baru, perbaikan latihan, perubahan pengalaman mobile, promo bertanggal, dan panduan terbaru."
 publishDate: 2026-08-28
+updatedDate: 2026-08-31
 category: psikotes-kerja
 tags:
   - update Sikotesku
@@ -49,7 +50,7 @@ Halaman Updates dapat membahas:
 - petunjuk HVS Wartegg yang lebih jelas;
 - leaderboard Ajak Teman yang lebih transparan;
 - kemampuan memasang Sikotesku di layar utama;
-- persiapan CPNS yang segera hadir;
+- latihan CPNS yang kini memiliki beberapa pilihan format;
 - CV tersimpan untuk Karier 31;
 - pemulihan pengalaman Kraepelin saat koneksi terganggu;
 - kategori latihan Matdas dan TIU;
@@ -70,6 +71,7 @@ Setelah membaca update, lanjutkan ke panduan yang sesuai:
 - [persiapan Wartegg](/artikel/persiapan-hvs-delapan-kotak-wartegg/);
 - [cara membaca rank Battle](/artikel/cara-kerja-ranking-mode-battle/);
 - [menggunakan Riwayat](/artikel/cara-menggunakan-riwayat-sikotesku/);
+- [cara mulai latihan CPNS](/artikel/cara-mulai-latihan-cpns-sikotesku/);
 - [memilih paket credit](/artikel/memilih-paket-credit-latihan/);
 - [mengatur email](/artikel/mengatur-preferensi-email-sikotesku/).
 

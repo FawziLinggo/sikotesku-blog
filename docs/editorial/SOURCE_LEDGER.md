@@ -31,7 +31,7 @@ mendukung beberapa ide, tetapi setiap klaim produk tetap harus dapat ditelusuri.
 | SRC-015 | Wartegg | `docs/wartegg/SUMMARY.md` | Delapan stimulus, upload, review teknis | repo | Tinggi bila membahas foto | Jelaskan privacy dan batas non-diagnosis |
 | SRC-016 | Battle | `docs/assessment-room-battle/SUMMARY.md` | Credit, consent, waktu, rank final | repo | Tinggi | Bahas mekanisme tanpa nama/skor |
 | SRC-017 | Result release | `docs/assessment-room-result-release/SUMMARY.md` | Review room ditahan sampai room selesai | repo | Rendah | Jadikan artikel edukasi fairness |
-| SRC-018 | CPNS | `docs/cpns/SUMMARY.md` dan live `/cpns` | Status coming soon dan blueprint umum | ganda | Tinggi karena volatil | Selalu label belum dibuka |
+| SRC-018 | CPNS | live `/cpns`, `/cpns/dashboard`, dan `docs/cpns/SUMMARY.md` read-only | Jalur CPNS aktif, diagnostic, latihan, tryout, Pass/credit, serta batas interpretasi | ganda | Tinggi karena volatil | Production page menjadi sumber status; katalog/checkout menjadi sumber konfigurasi dan harga |
 | SRC-019 | Karier 31 | `docs/siap-kerja/SUMMARY.md` dan live `/karier-31` | Program 31 hari, jalur, paket, laporan | ganda | Sedang | Harga/slot wajib diberi tanggal |
 | SRC-020 | CVKu AI | `docs/cv-review-ai/SUMMARY.md` dan source route | Review CV berbasis AI, batas file, retensi | repo | Tinggi | Jangan minta pembaca mengunggah data sensitif ke blog |
 | SRC-021 | InterviewKu | `docs/interview-simulation/DECISIONS.md` | Sesi pakar 30 menit, scope fresh graduate | repo | Sedang | AI route terpisah dan status harus jelas |

@@ -39,6 +39,7 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
 | CP-15 | Tulis batch artikel prioritas Sikotesku | selesai | B-001 sampai B-011 menambah 80 artikel produk; total repo sebelum gap filler 90 artikel |
 | CP-16 | Lengkapi topik psikotes/karier umum bila perlu | selesai | B-012 menambah A-091 sampai A-100; total repo 100 artikel |
 | CP-17 | Audit akhir metadata, tautan, dan cakupan | selesai | 100 file selaras dengan map; metadata, CTA, 243 internal link, PII, dan batas klaim lulus source-only |
+| CP-18 | Sinkronkan cluster CPNS setelah production aktif | selesai | 5 artikel diperbarui, 5 intent baru ditambah; 10 artikel CPNS, FAQ/sumber/schema, route production, dan QA source-only lulus |
 
 ## Definition of Done Per Artikel
 
@@ -105,7 +106,7 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
 | B-007 | A-055 Upload foto Wartegg | ready | JPG/PNG, 8 MB, foto utuh, metadata, dan privasi dijelaskan |
 | B-007 | A-056 Review teknis Wartegg | ready | Struktur review dan batas non-psikologis dibedakan |
 | B-007 | A-057 Wartegg bukan diagnosis | ready | Klaim kepribadian dan kelulusan ditolak eksplisit |
-| B-008 | A-058 Status CPNS Sikotesku | ready | Halaman live dinyatakan belum dibuka dan tanpa tanggal publik |
+| B-008 | A-058 Status CPNS Sikotesku | ready | Snapshot prelaunch 28 Agustus; kemudian disinkronkan ulang melalui B-013 |
 | B-008 | A-059 Diagnostic CPNS | ready | Fungsi pemetaan dipisahkan dari passing grade |
 | B-008 | A-060 Peta TWK/TIU/TKP | ready | Referensi historis dipisahkan dari aturan siklus baru |
 | B-008 | A-061 Matdas dalam TIU numerik | ready | Matdas tidak disebut bagian keempat SKD |
@@ -148,6 +149,12 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
 | B-012 | A-098 Metode STAR | ready | Situation, Task, Action, Result memakai pengalaman autentik |
 | B-012 | A-099 Mitos ATS | ready | Skor universal ditolak; struktur, teks, keyword, dan bukti dijelaskan |
 | B-012 | A-100 Rencana 30 hari | ready | Psikotes, CV, STAR, interview, recovery, dan batas hasil disusun bertahap |
+| B-013 | A-058 sampai A-062 sinkronisasi CPNS production | ready | Seluruh klaim coming soon dihapus dan CTA diarahkan ke route aktif |
+| B-013 | A-101 Cara mulai latihan CPNS | ready | Artikel pilar dari dashboard, diagnostic, latihan, akses, hasil, hingga Room |
+| B-013 | A-102 Jenis latihan CPNS | ready | Diagnostic, Drill, Tes Cepat, Tes Intensif, Full SKD, dan Room dipisahkan menurut tujuan |
+| B-013 | A-103 Pass atau Credit CPNS | ready | Tidak mengunci harga; katalog dan checkout menjadi sumber authoritative |
+| B-013 | A-104 Hasil, riwayat, dan ranking CPNS | ready | Perbandingan dibatasi pada jenis tes sama dan bukan prediksi seleksi |
+| B-013 | A-105 Room CPNS | ready | Admin-managed, privacy-safe, tanpa kode atau identitas peserta |
 
 ## Catatan Sesi
 
@@ -222,8 +229,9 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
   valid, body minimum 357 kata, CTA HTTPS, kategori valid, dan tidak menemukan
   pola email/telepon atau istilah internal terlarang.
 - Sepuluh artikel pilar awal diberi internal link agar tidak menjadi halaman
-  buntu. CPNS tetap selalu disebut belum dibuka untuk publik; harga, promo, slot,
-  rank, dan benefit volatil diarahkan ke halaman live.
+  buntu. Pada snapshot 28 Agustus CPNS masih disebut belum dibuka; status historis
+  ini kemudian digantikan sinkronisasi production B-013. Harga, promo, slot,
+  rank, dan benefit volatil tetap diarahkan ke halaman live.
 - `git diff --check` sudah dijalankan sebagai pemeriksaan whitespace. Build,
   test, dan lint lokal tetap diserahkan kepada user sesuai aturan repo;
   publikasi production menggunakan integrasi Git Cloudflare.
@@ -239,3 +247,20 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
   pekerjaan berikutnya.
 - Dev server tidak sedang aktif. Build, test, dan lint lokal belum dijalankan
   sesuai aturan repo.
+
+### 2026-08-31
+
+- CPNS dikonfirmasi aktif di production. `/cpns`, `/cpns/dashboard`,
+  `/cpns/checkout`, `/cpns/history`, dan `/cpns/rooms` merespons HTTP 200.
+- B-013 memperbarui 5 artikel prelaunch dan menambah 5 artikel baru sehingga
+  repo memiliki 105 artikel publik dan cluster CPNS memiliki 10 artikel.
+- Hub `/topik/cpns/`, FAQ terlihat, sumber/verifikasi terlihat, schema FAQPage,
+  citation, entity `sameAs`, metadata artikel, serta direktori CPNS di
+  `llms.txt` ditambahkan tanpa Worker runtime atau JavaScript baru.
+- QA source-only mencatat 260 internal link valid, title/description unik,
+  seluruh artikel CPNS minimal 357 kata, masing-masing memiliki 3 FAQ dan
+  minimal 1 sumber, serta tidak menemukan klaim prelaunch, PII, atau credential.
+- Detector Impeccable menemukan satu pola `side-tab` lama pada `.article-answer`
+  dari commit sebelum B-013; perubahan CPNS tidak menambah pola tersebut.
+- `git diff --check` dan pemeriksaan EOF lulus. Build, test, dan lint belum
+  dijalankan sesuai aturan repo. Commit, push, dan deploy juga belum dilakukan.

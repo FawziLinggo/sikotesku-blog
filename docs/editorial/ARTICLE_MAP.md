@@ -81,11 +81,11 @@ baru tidak dibuat sebelum cukup banyak artikel agar halaman topik tidak tipis.
 | A-055 | Wartegg | Upload foto Wartegg: format dan privasi yang perlu dipahami | `upload-foto-wartegg-dan-privasi` | SRC-015 | `/wartegg` | ready | Jangan meminta foto di blog |
 | A-056 | Wartegg | Apa arti review teknis pada Latihan Wartegg? | `review-teknis-latihan-wartegg` | SRC-015 | `/wartegg` | ready | Tidak ada interpretasi kepribadian |
 | A-057 | Wartegg | Mengapa Wartegg bukan alat diagnosis psikologis? | `wartegg-bukan-diagnosis-psikologis` | SRC-015 | `/wartegg` | ready | Tegaskan batas layanan |
-| A-058 | CPNS | Status persiapan CPNS di Sikotesku saat ini | `persiapan-cpns-sikotesku` | F-020 | `/cpns` | ready | Label belum dibuka untuk publik |
-| A-059 | CPNS | Diagnostic CPNS: fungsi dan batas interpretasinya | `diagnostic-cpns-fungsi-batas` | SRC-018 | `/cpns` | ready | Rujuk sebagai rencana, bukan akses aktif |
+| A-058 | CPNS | Latihan CPNS Sikotesku sudah aktif: fitur dan cara mengaksesnya | `persiapan-cpns-sikotesku` | F-020,SRC-031 | `/cpns` | ready | Harga dan ketersediaan mengikuti halaman live |
+| A-059 | CPNS | Diagnostic CPNS: fungsi, cara memulai, dan batas hasilnya | `diagnostic-cpns-fungsi-batas` | SRC-018,SRC-031 | `/cpns/dashboard` | ready | Bukan passing grade atau prediksi kelulusan |
 | A-060 | CPNS | TWK, TIU, dan TKP: peta belajar dasar | `twk-tiu-tkp-peta-belajar` | SRC-018 | `/cpns` | ready | Historical reference harus diberi konteks |
 | A-061 | CPNS | Mengapa Matdas masuk jalur TIU numerik CPNS | `matdas-dalam-tiu-numerik-cpns` | SRC-018 | `/cpns` | ready | Tidak menyamakan engine produk |
-| A-062 | CPNS | Full tryout dan diagnostic: apa perbedaan tujuannya? | `full-tryout-vs-diagnostic-cpns` | SRC-018 | `/cpns` | ready | Fitur belum dibuka publik |
+| A-062 | CPNS | Full tryout dan diagnostic: apa perbedaan tujuannya? | `full-tryout-vs-diagnostic-cpns` | SRC-018,SRC-031 | `/cpns/dashboard` | ready | Bandingkan fungsi, bukan skor mentah |
 | A-063 | Karier | Karier 31: program persiapan kerja selama 31 hari | `karier-31-program-persiapan-kerja` | F-021 | `/karier-31` | ready | Harga/slot bertanggal |
 | A-064 | Karier | Jalur Operator Produksi dalam Karier 31 | `jalur-operator-produksi-karier-31` | SRC-019 | `/karier-31` | ready | Bukan jaminan penempatan |
 | A-065 | Karier | Jalur Gudang dan Logistik untuk pencari kerja pemula | `jalur-gudang-logistik-karier-31` | SRC-019 | `/karier-31` | ready | Posisi mengikuti katalog |
@@ -124,6 +124,11 @@ baru tidak dibuat sebelum cukup banyak artikel agar halaman topik tidak tipis.
 | A-098 | Karier | Metode STAR untuk menjawab pertanyaan interview | `metode-star-jawaban-interview` | umum | `/interview-simulation` | ready | Contoh harus autentik |
 | A-099 | Karier | Mitos ATS dan cara membuat CV mudah dipindai | `mitos-ats-dan-cv-mudah-dipindai` | umum | `/cv-review/ai` | ready | ATS bukan skor resmi universal |
 | A-100 | Karier | Rencana 30 hari dari latihan psikotes sampai interview | `rencana-30-hari-psikotes-interview` | umum | `/karier-31` | ready | Rencana contoh, bukan janji hasil |
+| A-101 | CPNS | Cara mulai latihan CPNS di Sikotesku dari Diagnostic | `cara-mulai-latihan-cpns-sikotesku` | F-020,SRC-031 | `/cpns/dashboard` | ready | Artikel pilar langkah awal production |
+| A-102 | CPNS | Jenis latihan CPNS Sikotesku: Diagnostic sampai Full SKD | `jenis-latihan-cpns-sikotesku` | F-020,SRC-031 | `/cpns/dashboard` | ready | Konfigurasi tes mengikuti katalog live |
+| A-103 | CPNS | Pass atau Credit CPNS Sikotesku: mana yang sesuai? | `pass-atau-credit-latihan-cpns` | F-020 | `/cpns/checkout` | ready | Harga dan benefit hanya dari checkout |
+| A-104 | CPNS | Cara membaca hasil, riwayat, dan ranking CPNS Sikotesku | `cara-membaca-hasil-dan-ranking-cpns` | SRC-031 | `/cpns/history` | ready | Bukan ranking resmi seleksi |
+| A-105 | CPNS | Room CPNS Sikotesku: cara kerja, akses, dan ranking | `room-cpns-sikotesku` | F-020,SRC-031 | `/cpns/rooms` | ready | Jangan memuat kode atau identitas peserta |
 
 ## Status Produksi
 
@@ -132,7 +137,9 @@ baru tidak dibuat sebelum cukup banyak artikel agar halaman topik tidak tipis.
 3. A-063 sampai A-090 selesai melalui B-009 sampai B-011.
 4. A-091 sampai A-100 selesai melalui B-012 sebagai pelengkap psikotes dan
    karier umum setelah seluruh konten produk prioritas selesai.
+5. B-013 menyinkronkan A-058 sampai A-062 dengan status CPNS production dan
+   menambah A-101 sampai A-105 sebagai cluster intent lanjutan.
 
-Peta awal kini terkunci pada 100 artikel. Penambahan berikutnya harus mengikuti
+Peta kini berisi 105 artikel. Penambahan berikutnya harus mengikuti
 perubahan produk yang sudah publik, kebutuhan pembaca, atau data Search Console;
 jangan menambah halaman tipis hanya untuk mengejar jumlah URL.

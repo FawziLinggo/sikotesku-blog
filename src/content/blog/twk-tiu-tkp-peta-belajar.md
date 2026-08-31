@@ -1,124 +1,111 @@
 ---
-title: "TWK, TIU, dan TKP: Peta Belajar Dasar"
-description: "Susun fondasi belajar TWK, TIU, dan TKP dengan sumber resmi, latihan terarah, serta evaluasi yang tidak mengunci aturan siklus lama."
+title: "TWK, TIU, dan TKP: Peta Belajar CPNS yang Lebih Terarah"
+description: "Susun latihan TWK, TIU, dan TKP secara bertahap dengan diagnostic, latihan per bagian, dan simulasi tanpa mengunci aturan siklus lama."
 publishDate: 2026-08-28
-category: psikotes-kerja
+updatedDate: 2026-08-31
+category: cpns
 tags:
   - TWK TIU TKP
   - peta belajar CPNS
-  - persiapan SKD
-  - latihan CPNS
+  - latihan SKD
+  - persiapan CPNS
 author: Tim Sikotesku
 readingMinutes: 8
 featured: false
 draft: false
+faq:
+  - question: "Apa perbedaan fokus belajar TWK, TIU, dan TKP?"
+    answer: "TWK menekankan pemahaman wawasan kebangsaan dari sumber yang dapat diperiksa, TIU melatih kemampuan verbal, numerik, dan penalaran, sedangkan TKP melatih analisis pilihan tindakan dalam situasi kerja dan pelayanan."
+  - question: "Apakah Matdas merupakan bagian resmi keempat SKD?"
+    answer: "Tidak. Di Sikotesku, Matdas adalah jalur latihan untuk memperkuat fondasi TIU numerik dan tetap berada di bawah konteks TIU."
+  - question: "Bagaimana urutan belajar CPNS yang disarankan?"
+    answer: "Mulai dengan diagnostic, pilih prioritas, pelajari konsep, kerjakan latihan per bagian, lalu gunakan Tes Cepat, Tes Intensif, atau Full SKD sesuai kesiapan."
+sources:
+  - name: "Halaman Latihan CPNS Sikotesku"
+    url: "https://sikotesku.com/cpns"
+    note: "Menjelaskan cakupan TWK, TIU, TKP, dan Matdas sebagai bagian TIU numerik; diverifikasi 31 Agustus 2026."
 cta:
-  label: Lihat Persiapan CPNS
-  href: https://sikotesku.com/cpns
-  description: Halaman Sikotesku masih berstatus segera hadir; gunakan untuk mengikuti pembaruan jalur belajar.
+  label: Buka dashboard CPNS
+  href: https://sikotesku.com/cpns/dashboard
+  description: Gunakan peta belajar ini lalu pilih latihan TWK, TIU, TKP, atau simulasi yang tersedia di dashboard.
 ---
 
-TWK, TIU, dan TKP adalah tiga bagian yang sering dibahas dalam konteks Seleksi Kompetensi Dasar pada referensi siklus sebelumnya. Untuk siklus berikutnya, ketentuan terbaru tetap harus mengikuti sumber pemerintah yang berlaku.
-
-Artikel ini memberi peta belajar umum, bukan kisi-kisi resmi atau kepastian jumlah soal.
+Peta belajar CPNS yang sehat memisahkan fungsi TWK, TIU, dan TKP, lalu menghubungkannya kembali melalui simulasi. Mulai dari pemetaan, fokus pada kebutuhan terbesar, dan jangan menganggap aturan siklus lama otomatis berlaku kembali.
 
 ## TWK: bangun pemahaman dan sumber
 
-TWK berkaitan dengan wawasan kebangsaan dalam konteks ketentuan seleksi yang berlaku. Belajar TWK sebaiknya tidak hanya menghafal potongan konten tanpa sumber.
-
-Gunakan kebiasaan:
+Belajar TWK sebaiknya tidak hanya menghafal potongan informasi tanpa konteks. Biasakan:
 
 - mencatat sumber pemerintah atau dokumen resmi;
-- membuat garis waktu singkat;
-- menghubungkan konsep dengan konteks;
+- membuat hubungan antarkonsep;
 - membedakan fakta, opini, dan informasi belum terverifikasi;
-- memperbarui catatan ketika aturan baru terbit.
+- menuliskan tanggal pada catatan aturan;
+- memperbarui materi ketika sumber resmi baru diterbitkan.
 
-Hindari soal bocoran dan klaim bahwa satu daftar pasti keluar.
+Latihan membantu menguji pemahaman, tetapi bukan bukti bahwa satu daftar pasti muncul dalam seleksi.
 
 ## TIU: pecah menjadi kemampuan
 
-TIU dapat melibatkan area seperti:
+TIU dapat dilatih melalui area verbal, numerik, dan penalaran. Pisahkan jenis kesalahan agar latihan lebih tepat.
 
-- verbal;
-- numerik;
-- logika atau penalaran;
-- kemampuan lain sesuai aturan resmi yang berlaku.
+- Verbal: pahami hubungan kata, pembatas, dan kesimpulan.
+- Numerik: latih hitung dasar, penerjemahan soal, serta pola angka.
+- Penalaran: tentukan premis, aturan, dan hubungan yang benar-benar diberikan.
 
-Jangan berlatih seluruh TIU dengan satu cara. Gunakan kategori untuk mengetahui apakah kendala berada pada bahasa, angka, atau hubungan aturan.
+Kamu dapat menghubungkan cluster ini dengan [latihan verbal](/artikel/latihan-verbal-persiapan-tiu/), [strategi numerik](/artikel/strategi-soal-numerik-tiu/), dan [latihan logika](/artikel/cara-melatih-logika-tiu/).
 
-[Latihan Verbal](/artikel/latihan-verbal-persiapan-tiu/), [strategi Numerik](/artikel/strategi-soal-numerik-tiu/), dan [latihan Logika](/artikel/cara-melatih-logika-tiu/) dapat membantu membangun proses dasar.
+## TKP: analisis situasi dan konsekuensi
 
-## TKP: baca situasi dan konsekuensi
-
-TKP menggunakan konteks situasional. Latihan yang sehat tidak mencari "kata ajaib", tetapi membandingkan dampak setiap opsi terhadap tujuan, tanggung jawab, layanan, kerja sama, dan aturan dalam situasi.
-
-Gunakan langkah:
+TKP tidak sebaiknya dipelajari dengan mencari kata ajaib. Gunakan langkah:
 
 1. tentukan masalah utama;
 2. kenali pihak yang terdampak;
-3. lihat batas kewenangan;
+3. periksa batas kewenangan;
 4. bandingkan konsekuensi opsi;
-5. pilih respons yang paling konsisten dengan konteks.
+5. pilih respons paling konsisten dengan tujuan situasi.
 
-Jangan menghafal urutan jawaban dari sumber tidak resmi.
+Hindari menghafal urutan jawaban dari sumber yang tidak dapat diperiksa.
 
-## Aturan lama adalah referensi historis
+## Matdas berada di dalam latihan TIU numerik
 
-Jumlah soal, durasi, bobot, dan ambang pada siklus lama dapat membantu memahami sejarah format, tetapi tidak boleh otomatis diberi label sebagai aturan siklus berikutnya.
+Matdas di Sikotesku digunakan untuk memperkuat kelancaran hitung dasar. Ia bukan bagian resmi keempat SKD.
 
-Tulis tahun pada catatanmu. Bila sebuah tabel tidak memiliki sumber dan tanggal, jangan jadikan acuan utama.
+Baca [mengapa Matdas masuk jalur TIU numerik](/artikel/matdas-dalam-tiu-numerik-cpns/) sebelum menyusun latihan angka.
 
-## Rencana belajar empat tahap
+## Urutan latihan empat tahap
 
-### Tahap 1: pemetaan
+### 1. Pemetaan
 
-Gunakan diagnostic atau latihan singkat untuk menemukan dua prioritas. Diagnostic Sikotesku masih belum tersedia untuk publik.
+Gunakan [Diagnostic CPNS](/artikel/diagnostic-cpns-fungsi-batas/) untuk menemukan satu atau dua prioritas.
 
-### Tahap 2: konsep
+### 2. Latihan per bagian
 
-Pelajari materi dan metode per bagian. Hindari langsung mengerjakan banyak soal tanpa memahami alasan salah.
+Pelajari konsep dan kerjakan sesi terarah pada bagian yang dipilih. Catat alasan salah, bukan hanya skor.
 
-### Tahap 3: latihan terarah
+### 3. Tes menengah
 
-Gunakan sesi kecil untuk memperbaiki satu area, misalnya TIU numerik atau kata pembatas pada verbal.
+Gunakan Tes Cepat atau Tes Intensif untuk menguji konsistensi pada durasi yang lebih panjang.
 
-### Tahap 4: simulasi menyeluruh
+### 4. Simulasi menyeluruh
 
-Setelah fondasi cukup, gunakan full tryout untuk melatih perpindahan bagian dan pembagian waktu. Fitur CPNS Sikotesku masih disiapkan.
+Gunakan Full SKD ketika ingin melatih perpindahan bagian, pembagian waktu, dan stamina.
+
+[Jenis latihan CPNS Sikotesku](/artikel/jenis-latihan-cpns-sikotesku/) membantu memilih format yang sesuai.
 
 ## Buat ledger sumber pribadi
 
-Simpan tabel sederhana:
-
 | Informasi | Sumber | Tanggal | Status |
 | --- | --- | --- | --- |
-| Aturan seleksi | Situs pemerintah | tanggal akses | aktif/historis |
+| Aturan seleksi | Situs pemerintah | tanggal akses | aktif atau historis |
 | Jadwal | Pengumuman instansi | tanggal akses | perlu cek ulang |
-| Materi latihan | Catatan pribadi | tanggal | latihan |
+| Hasil latihan | Akun Sikotesku | tanggal sesi | bahan evaluasi |
 
-Ledger mencegah screenshot lama tercampur dengan aturan baru.
+Ledger sederhana mencegah screenshot lama tercampur dengan aturan terbaru.
 
-## Jangan lupakan manajemen waktu
+## Evaluasi proses, bukan hanya skor
 
-Latihan bagian secara terpisah perlu dilanjutkan dengan simulasi yang menguji perpindahan. Catat:
-
-- waktu per bagian;
-- soal yang banyak ditunda;
-- penurunan fokus;
-- keputusan ketika ragu;
-- sisa waktu pemeriksaan.
-
-[Diagnostic dan full tryout](/artikel/full-tryout-vs-diagnostic-cpns/) memiliki tujuan yang berbeda dalam siklus ini.
-
-## Status di Sikotesku
-
-Sikotesku sedang menyiapkan jalur TWK, TIU, TKP, diagnostic, latihan, full tryout, dan Room. Belum ada tanggal akses publik.
-
-Ikuti [status Persiapan CPNS Sikotesku](/artikel/persiapan-cpns-sikotesku/) agar tidak menganggap rencana sebagai fitur aktif.
+Catat waktu per bagian, soal yang ditunda, pola salah, penurunan fokus, dan keputusan saat ragu. Setelah itu, buka [riwayat dan ranking CPNS](/artikel/cara-membaca-hasil-dan-ranking-cpns/) untuk membaca konteks latihan dengan lebih adil.
 
 ## Ringkasnya
 
-Belajar TWK dengan sumber, TIU dengan kategori kemampuan, dan TKP dengan analisis situasi. Pisahkan aturan historis dari aturan baru serta evaluasi proses, bukan hanya skor.
-
-Pantau pembaruan di [halaman CPNS Sikotesku](https://sikotesku.com/cpns).
+Belajar TWK dengan sumber, TIU berdasarkan jenis kemampuan, dan TKP melalui analisis situasi. Gunakan diagnostic untuk memilih prioritas lalu naikkan intensitas latihan secara bertahap.

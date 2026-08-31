@@ -1,120 +1,123 @@
 ---
 title: "Full Tryout dan Diagnostic CPNS: Apa Perbedaannya?"
-description: "Bandingkan tujuan pemetaan diagnostic dan simulasi menyeluruh full tryout CPNS agar keduanya digunakan pada tahap belajar yang tepat."
+description: "Bandingkan diagnostic dan Full SKD Sikotesku agar kamu tahu kapan perlu memetakan prioritas dan kapan perlu melatih simulasi menyeluruh."
 publishDate: 2026-08-28
-category: psikotes-kerja
+updatedDate: 2026-08-31
+category: cpns
 tags:
   - full tryout CPNS
   - diagnostic CPNS
-  - simulasi CPNS
-  - rencana belajar
+  - Full SKD
+  - rencana belajar CPNS
 author: Tim Sikotesku
 readingMinutes: 7
 featured: false
 draft: false
+faq:
+  - question: "Apa perbedaan utama diagnostic dan Full SKD?"
+    answer: "Diagnostic membantu menemukan prioritas belajar, sedangkan Full SKD digunakan untuk melatih keseluruhan simulasi, perpindahan bagian, pembagian waktu, dan stamina."
+  - question: "Kapan sebaiknya memakai diagnostic CPNS?"
+    answer: "Gunakan diagnostic pada awal belajar, setelah jeda panjang, atau ketika kamu belum tahu bagian TWK, TIU, atau TKP mana yang perlu diprioritaskan."
+  - question: "Apakah skor diagnostic dapat dibandingkan langsung dengan Full SKD?"
+    answer: "Tidak. Keduanya memiliki tujuan dan format berbeda. Baca hasil per bagian dan gunakan masing-masing sebagai konteks untuk keputusan belajar berikutnya."
+sources:
+  - name: "Halaman Latihan CPNS Sikotesku"
+    url: "https://sikotesku.com/cpns"
+    note: "Menjelaskan jalur dari diagnostic sampai full tryout; diverifikasi 31 Agustus 2026."
+  - name: "Pembaruan Produk Sikotesku"
+    url: "https://sikotesku.com/updates"
+    note: "Mengonfirmasi pilihan latihan singkat, intensif, dan simulasi penuh telah tersedia."
 cta:
-  label: Periksa status CPNS
-  href: https://sikotesku.com/cpns
-  description: Diagnostic dan full tryout Sikotesku masih disiapkan dan belum dibuka untuk publik.
+  label: Pilih tes CPNS
+  href: https://sikotesku.com/cpns/dashboard
+  description: Buka dashboard dan pilih diagnostic atau tes yang sesuai dengan tahap latihanmu saat ini.
 ---
 
-Diagnostic dan full tryout menjawab dua pertanyaan berbeda. Diagnostic membantu menentukan **apa yang perlu dipelajari**, sedangkan full tryout membantu menguji **bagaimana kamu menjalankan keseluruhan simulasi**.
+Diagnostic dan Full SKD menjawab dua pertanyaan berbeda. Diagnostic membantu menentukan **apa yang perlu dipelajari**, sedangkan Full SKD membantu menguji **bagaimana kamu menjalankan keseluruhan simulasi**.
 
-Keduanya masih menjadi rencana pada halaman CPNS Sikotesku dan belum tersedia untuk publik per 28 Agustus 2026.
+Keduanya sudah menjadi bagian dari jalur latihan CPNS Sikotesku.
 
 ## Tujuan diagnostic
 
-Diagnostic biasanya lebih singkat dan dipakai untuk pemetaan awal. Fokusnya:
+Diagnostic digunakan untuk:
 
-- melihat gambaran TWK, TIU, dan TKP;
+- melihat gambaran awal TWK, TIU, dan TKP;
 - menemukan area yang belum familiar;
-- menentukan prioritas;
+- menentukan prioritas latihan;
 - membedakan kendala konsep dan waktu;
-- menyusun latihan berikutnya.
+- menyusun langkah berikutnya.
 
-Hasil diagnostic bukan passing grade resmi. Baca [fungsi dan batas diagnostic](/artikel/diagnostic-cpns-fungsi-batas/) sebelum menafsirkannya.
+Hasilnya bukan passing grade resmi. Baca [fungsi dan batas diagnostic](/artikel/diagnostic-cpns-fungsi-batas/) sebelum menafsirkan angka.
 
-## Tujuan full tryout
+## Tujuan Full SKD
 
-Full tryout memberi pengalaman lebih menyeluruh untuk melatih:
+Full SKD digunakan untuk melatih:
 
-- perpindahan bagian;
+- perpindahan antarbagian;
 - pembagian waktu;
 - konsistensi perhatian;
-- keputusan ketika ragu;
+- keputusan saat ragu;
 - stamina;
-- evaluasi hasil akhir.
+- evaluasi hasil menyeluruh.
 
-Tryout tetap latihan. Ia tidak menjamin soal, skor, atau hasil seleksi nyata.
+Simulasi tetap bukan jaminan bahwa soal atau hasil seleksi nyata akan sama.
 
 ## Kapan memakai diagnostic?
 
-Gunakan pada:
+Gunakan saat:
 
-- awal rencana belajar;
-- setelah jeda panjang;
-- ketika tidak tahu prioritas;
-- setelah perubahan materi atau aturan;
-- saat ingin mengevaluasi dampak latihan terarah.
+- baru memulai persiapan;
+- kembali belajar setelah jeda;
+- belum mengetahui prioritas;
+- ingin menyusun latihan per bagian;
+- ingin melihat perubahan kebutuhan belajar.
 
-Jangan mengulang diagnostic setiap hari hanya untuk mengejar angka.
+Diagnostic tidak perlu diulang setiap hari.
 
-## Kapan memakai full tryout?
+Ulangi ketika pola latihan berubah atau kamu memerlukan baseline baru untuk menyusun prioritas berikutnya.
+
+## Kapan memakai Full SKD?
 
 Gunakan setelah:
 
-- konsep dasar sudah dipelajari;
+- konsep dasar mulai dipahami;
 - latihan per bagian sudah dilakukan;
-- kamu memiliki waktu tanpa gangguan;
+- memiliki waktu tanpa gangguan;
 - ingin menguji strategi keseluruhan;
-- siap mengevaluasi, bukan sekadar melihat skor.
-
-Full tryout terlalu awal dapat hanya menunjukkan bahwa banyak materi belum dipelajari, tanpa memberi latihan yang efisien.
+- siap mengevaluasi proses, bukan sekadar melihat skor.
 
 ## Perbedaan ringkas
 
-| Aspek | Diagnostic | Full tryout |
+| Aspek | Diagnostic | Full SKD |
 | --- | --- | --- |
 | Tujuan | Pemetaan prioritas | Simulasi menyeluruh |
 | Tahap | Awal atau evaluasi ulang | Setelah latihan terarah |
-| Fokus | Area kuat dan lemah | Waktu, stamina, perpindahan |
-| Interpretasi | Estimasi latihan | Hasil simulasi |
+| Fokus | Area yang perlu dilatih | Waktu, stamina, dan perpindahan |
+| Interpretasi | Baseline latihan | Hasil simulasi |
 | Bukan | Passing grade resmi | Jaminan kelulusan |
 
-Konfigurasi aktual harus dilihat saat fitur resmi dibuka.
+## Bagaimana dengan Tes Cepat dan Tes Intensif?
+
+Keduanya menjadi jembatan antara latihan per bagian dan Full SKD. Tes Cepat cocok untuk waktu lebih ringkas, sementara Tes Intensif memberi sesi yang lebih panjang tanpa harus selalu memilih simulasi penuh.
+
+Lihat [jenis latihan CPNS Sikotesku](/artikel/jenis-latihan-cpns-sikotesku/) untuk peta lengkapnya.
 
 ## Siklus belajar yang disarankan
 
-1. Lakukan diagnostic.
-2. Pilih dua area prioritas.
-3. Pelajari konsep.
-4. Kerjakan latihan per bagian.
-5. Lakukan full tryout.
-6. Evaluasi waktu dan pola salah.
-7. Ulangi dengan prioritas baru.
-
-[Peta TWK, TIU, dan TKP](/artikel/twk-tiu-tkp-peta-belajar/) dapat membantu mengisi tahap latihan.
+1. Selesaikan diagnostic.
+2. Pilih satu atau dua prioritas.
+3. Pelajari konsep dan latihan per bagian.
+4. Gunakan Tes Cepat atau Tes Intensif.
+5. Jalankan Full SKD.
+6. Evaluasi riwayat, hasil, dan waktu.
+7. Susun prioritas baru.
 
 ## Jangan membandingkan skor mentah
 
-Diagnostic dan full tryout dapat memiliki jumlah soal, tujuan, dan skala berbeda. Skor mentah tidak boleh dibandingkan tanpa konteks.
+Format yang berbeda dapat memiliki jumlah soal, durasi, dan tujuan yang berbeda. Ranking Sikotesku juga dipisahkan mengikuti jenis tes agar konteks perbandingan lebih konsisten.
 
-Lihat per bagian, jumlah terjawab, pola salah, dan waktu. Gunakan hasil untuk keputusan belajar berikutnya.
-
-## Aturan resmi tetap terpisah
-
-Jumlah soal dan durasi dari referensi siklus lama tidak otomatis menjadi konfigurasi siklus baru. Sikotesku menyatakan aturan berikutnya akan diperbarui setelah sumber pemerintah terverifikasi.
-
-Hindari artikel atau video yang menghapus tahun dari informasi historis.
-
-## Status Sikotesku
-
-Diagnostic, latihan, full tryout, dan CPNS Room belum dibuka. Belum ada tanggal publik.
-
-[Status Persiapan CPNS Sikotesku](/artikel/persiapan-cpns-sikotesku/) menjadi checkpoint sebelum menyebut fitur tersedia.
+Baca [cara membaca hasil dan ranking CPNS](/artikel/cara-membaca-hasil-dan-ranking-cpns/) untuk menghindari kesimpulan berlebihan.
 
 ## Ringkasnya
 
-Diagnostic digunakan untuk menentukan prioritas, sedangkan full tryout untuk menguji strategi menyeluruh. Keduanya bukan passing grade atau jaminan kelulusan dan belum tersedia di Sikotesku saat ini.
-
-Ikuti pembaruan melalui [halaman CPNS Sikotesku](https://sikotesku.com/cpns).
+Gunakan diagnostic untuk menemukan prioritas dan Full SKD untuk menguji strategi keseluruhan. Tes Cepat serta Tes Intensif membantu menaikkan beban latihan secara bertahap di antara keduanya.

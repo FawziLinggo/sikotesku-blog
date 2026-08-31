@@ -13,6 +13,9 @@ const posts = (await getPublishedPosts()).filter(
   (post) => post.data.category === (topic.slug as TopicSlug),
 );
 const topicPath = `/topik/${topic.slug}/`;
+const topicAnswer = "answer" in topic ? topic.answer : undefined;
+const primaryUrl = "primaryUrl" in topic ? topic.primaryUrl : undefined;
+const primaryLabel = "primaryLabel" in topic ? topic.primaryLabel : undefined;
 const topicSchemas = [
   {
     "@type": "ItemList",
@@ -32,6 +35,13 @@ const topicSchemas = [
       { "@type": "ListItem", position: 2, name: "Topik", item: `${SITE.url}/topik/` },
       { "@type": "ListItem", position: 3, name: topic.label, item: `${SITE.url}${topicPath}` },
     ],
+  },
+  {
+    "@type": "Thing",
+    "@id": `${SITE.url}${topicPath}#topic`,
+    name: topic.label,
+    description: topic.description,
+    ...(primaryUrl ? { sameAs: primaryUrl } : {}),
   },
 ];
 ---
@@ -53,6 +63,13 @@ const topicSchemas = [
           <span class="meta-pill">Bahasa Indonesia</span>
           <span class="meta-pill">Dibaca dari HP</span>
         </div>
+        {topicAnswer && (
+          <div class="topic-answer">
+            <strong>Jawaban singkat</strong>
+            <p>{topicAnswer}</p>
+            {primaryUrl && primaryLabel && <a href={primaryUrl}>{primaryLabel}</a>}
+          </div>
+        )}
       </div>
     </div>
   </section>

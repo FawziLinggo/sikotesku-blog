@@ -31,6 +31,8 @@ const relatedPosts = allPosts
   .filter((candidate) => candidate.id !== post.id && candidate.data.category === post.data.category)
   .slice(0, 3);
 const tocHeadings = headings.filter((heading) => heading.depth === 2);
+const faqItems = post.data.faq ?? [];
+const sourceItems = post.data.sources ?? [];
 
 const articleSchema = {
   "@type": "BlogPosting",
@@ -56,9 +58,31 @@ const articleSchema = {
     "@type": "Thing",
     name: topic?.label ?? post.data.category,
     url: `${SITE.url}/topik/${post.data.category}/`,
+    ...(topic && "primaryUrl" in topic ? { sameAs: topic.primaryUrl } : {}),
   },
   mentions: post.data.tags.map((tag) => ({ "@type": "Thing", name: tag })),
+  ...(sourceItems.length > 0
+    ? {
+        citation: sourceItems.map((source) => ({
+          "@type": "CreativeWork",
+          name: source.name,
+          url: source.url,
+        })),
+      }
+    : {}),
 };
+
+const faqSchema = faqItems.length > 0
+  ? {
+      "@type": "FAQPage",
+      "@id": `${SITE.url}${canonicalPath}#faq`,
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    }
+  : undefined;
 
 const breadcrumbSchema = {
   "@type": "BreadcrumbList",
@@ -87,7 +111,9 @@ const breadcrumbSchema = {
   type="article"
   publishedTime={published}
   modifiedTime={modified}
-  structuredData={[articleSchema, breadcrumbSchema]}
+  articleSection={topic?.label}
+  articleTags={post.data.tags}
+  structuredData={[articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]}
 >
   <header class="article-hero">
     <div class="shell">
@@ -130,6 +156,35 @@ const breadcrumbSchema = {
       <div class="article-body">
         <Content />
       </div>
+
+      {faqItems.length > 0 && (
+        <section class="article-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Pertanyaan yang sering ditanyakan</h2>
+          <div class="article-faq-list">
+            {faqItems.map((item, index) => (
+              <details open={index === 0}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {sourceItems.length > 0 && (
+        <section class="article-sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">Sumber dan verifikasi</h2>
+          <p>Fakta produk pada artikel ini diperiksa melalui halaman publik berikut.</p>
+          <ul>
+            {sourceItems.map((source) => (
+              <li>
+                <a href={source.url}>{source.name}</a>
+                {source.note && <span>{source.note}</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <ArticleCta {...post.data.cta} />
 
       {relatedPosts.length > 0 && (

@@ -5,7 +5,7 @@ export const SITE = {
   mainUrl: "https://sikotesku.com",
   title: "Panduan Psikotes Kerja dan Karier | Sikotesku",
   description:
-    "Panduan psikotes kerja, latihan Kraepelin, Matematika Dasar, TIU / CFIT, ketelitian, CV, dan interview untuk fresh graduate.",
+    "Panduan psikotes kerja, latihan CPNS, Kraepelin, Matematika Dasar, TIU / CFIT, ketelitian, CV, dan interview untuk fresh graduate.",
   locale: "id_ID",
   author: "Tim Sikotesku",
   authorUrl: "https://blog.sikotesku.com/penulis/tim-sikotesku/",
@@ -53,6 +53,17 @@ export const TOPICS = [
     description: "Bangun kebiasaan memeriksa detail tanpa kehilangan kecepatan kerja.",
     accent: "sky",
     symbol: "OK",
+  },
+  {
+    slug: "cpns",
+    label: "Latihan CPNS",
+    shortLabel: "CPNS",
+    description: "Mulai dari diagnostic, TWK, TIU, TKP, latihan per bagian, sampai simulasi penuh.",
+    answer: "Sikotesku menyediakan jalur latihan CPNS dari diagnostic awal, latihan per bagian, Tes Cepat, Tes Intensif, Full SKD, hingga Room yang dikelola Admin.",
+    primaryUrl: "https://sikotesku.com/cpns",
+    primaryLabel: "Buka latihan CPNS",
+    accent: "sky",
+    symbol: "C",
   },
   {
     slug: "karier",

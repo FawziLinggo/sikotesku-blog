@@ -24,7 +24,7 @@ artikel. Baris ditambahkan hanya setelah ada bukti yang dapat dilacak.
 | F-017 | Room assessment | SRC-003, SRC-016, SRC-024 | `https://sikotesku.com/mitra` | 200 | ya | sedang | tinggi | Jelaskan untuk panitia/mitra |
 | F-018 | Result release room | SRC-017 | belum ada route mandiri | belum | ya | rendah | rendah | Artikel fairness dan waktu review |
 | F-019 | Rank global individu | SRC-010, SRC-012, SRC-013, SRC-014 | `/kraepelin/rank`, `/matdas/rank`, `/tiu/rank`, `/ketelitian/rank` | shell 200; data auth | ya, terbatas | tinggi | tinggi | Bukan rank Battle; hanya peserta yang mengaktifkan rank global |
-| F-020 | CPNS coming soon | SRC-018 | `https://sikotesku.com/cpns` | 200 | ya, terbatas | rendah | tinggi | Jangan menyebut tanggal launch |
+| F-020 | Latihan CPNS aktif | SRC-018, SRC-031 | `https://sikotesku.com/cpns` | 200 | ya | sedang | tinggi | Diagnostic, latihan, tryout, Pass/credit, hasil, ranking, dan Room; konfigurasi live tetap authoritative |
 | F-021 | Karier 31 | SRC-019 | `https://sikotesku.com/karier-31` | 200 | ya | sedang | tinggi | Program 31 hari; katalog authoritative |
 | F-022 | CV tersimpan | SRC-019, SRC-020 | `https://sikotesku.com/profile#career-document` | 200 | ya | tinggi | sedang | Jelaskan consent dan private storage secara umum |
 | F-023 | CVKu AI | SRC-020 | `https://sikotesku.com/cv-review/ai` | 200 | ya | tinggi | sedang | Batas PDF dan privacy guardrail |

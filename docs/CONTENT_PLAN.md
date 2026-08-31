@@ -31,7 +31,9 @@ bukan memproduksi halaman tipis demi kata kunci.
 ## Batch Editorial Berikutnya
 
 Batch B-001 sampai B-011 menambah 80 artikel spesifik Sikotesku. B-012 menambah
-10 artikel gap filler umum, sehingga repo memiliki tepat 100 artikel publik.
+10 artikel gap filler umum. Setelah CPNS aktif di production, B-013 memperbarui
+5 artikel prelaunch dan menambah 5 intent CPNS baru, sehingga repo memiliki 105
+artikel publik.
 Topiknya mencakup free practice, Mode Battle,
 ranking dan pemegang rekor live, credit dan refund, timer Battle, pemulihan
 koneksi, keypad serta ritme Kraepelin, kategori dan mode Matdas, TIU reguler,
@@ -41,9 +43,12 @@ Karier 31, jalur persiapan kerja, paket, CV tersimpan, laporan perkembangan,
 CVKu AI/Pakar, InterviewKu AI/Pakar, TesVerbalKu, Mitra, lowongan, referral,
 Hadiah, pembayaran, preferensi email, penghapusan akun, dan Updates.
 
-Audit source-only final mencocokkan seluruh 100 intent dengan file, memastikan
-metadata unik, CTA HTTPS, kategori valid, serta 243 internal link yang tidak
-putus. Harga, promo, slot, rank, dan benefit tetap diarahkan ke halaman live.
+Audit source-only awal mencocokkan 100 intent dengan file, memastikan metadata
+unik, CTA HTTPS, kategori valid, serta 243 internal link yang tidak putus.
+Audit setelah B-013 mencakup 105 artikel, 10 artikel CPNS, dan 260 internal link
+valid. Harga, promo, slot, rank, dan benefit tetap diarahkan ke halaman live.
+Cluster CPNS production sekarang mencakup cara mulai, jenis latihan, diagnostic,
+TWK/TIU/TKP, Matdas numerik, Full SKD, Pass/credit, hasil/ranking, dan Room.
 Status detail per slug ada di
 `docs/editorial/ARTICLE_MAP.md`;
 checkpoint sumber dan review ada di `docs/editorial/CHECKPOINTS.md`.
