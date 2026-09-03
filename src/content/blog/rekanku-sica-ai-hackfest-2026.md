@@ -41,13 +41,14 @@ Di titik itulah kebingungan muncul. Dashboard dapat menunjukkan banyak fitur. Ar
 
 Gagasannya sederhana tetapi menuntut disiplin teknis: SICA tidak cukup hanya memberi saran. SICA harus mengetahui kapan saran itu benar-benar berubah menjadi progres.
 
-## Roadmap AI Hackfest 2026
+## Arsitektur tingkat tinggi RekanKu
 
-Materi kompetisi menempatkan masa development dan submission pada **1–30 September 2026**, dilanjutkan judging pada **1–31 Oktober 2026**, dan pengumuman pemenang pada **6 November 2026**.
+Arsitektur RekanKu memisahkan keputusan keamanan dari reasoning AI. Backend menentukan izin, tindakan yang valid, serta bukti completion. SICA hanya membantu memilih prioritas di dalam batas tersebut.
 
-<img src="/articles/ai-hackfest-2026-roadmap.png" width="1483" height="748" loading="lazy" decoding="async" alt="Roadmap AI Hackfest 2026: registrasi Agustus, development dan submission September, judging Oktober, serta pengumuman pemenang November 2026">
-
-*Roadmap AI Hackfest 2026 berdasarkan materi kompetisi yang diterima peserta.*
+<figure class="article-diagram">
+  <img src="/articles/rekanku-high-level-architecture.svg" width="900" height="1280" loading="lazy" decoding="async" alt="Arsitektur tingkat tinggi RekanKu dari consent dan konteks minimum, policy gate backend, rule-based fallback atau reasoning SICA, misi dan CTA, hingga verifikasi completion dan adaptasi">
+  <figcaption>Alur utama RekanKu. Diagram sengaja tidak memuat endpoint, credential, atau detail infrastruktur privat.</figcaption>
+</figure>
 
 ## Mengapa daftar fitur dan chatbot umum belum cukup?
 
@@ -120,6 +121,15 @@ Dalam arsitektur RekanKu, Hermes berperan sebagai runtime agent yang terisolasi.
 Model tidak menentukan authorization, route bebas, quota, billing, atau status completion. Ia juga tidak mendapat akses langsung ke database, storage, browser, terminal, maupun layanan internal lain. Prinsip ini membatasi blast radius ketika provider gagal atau menghasilkan output yang tidak valid.
 
 Untuk tim yang membangun agent serupa, kebutuhan infrastrukturnya biasanya terbagi antara lingkungan eksperimen model seperti [AI Hosting](https://idwebhost.com/ai-hosting) dan runtime terisolasi pada [Cloud VPS](https://cloudbaik.com). Namun pilihan vendor bukan pengganti desain keamanan: identitas, izin, data minimum, validasi output, dan source of truth tetap harus dikendalikan aplikasi.
+
+<div class="article-brand-row" aria-label="Referensi layanan infrastruktur">
+  <a class="article-brand-link" href="https://idwebhost.com/ai-hosting" aria-label="Kunjungi AI Hosting dari IDwebhost">
+    <img src="/partners/idwebhost.svg" width="195" height="31" loading="lazy" decoding="async" alt="IDwebhost">
+  </a>
+  <a class="article-brand-link" href="https://cloudbaik.com" aria-label="Kunjungi Cloud VPS dari Cloudbaik">
+    <img src="/partners/cloudbaik.svg" width="500" height="100" loading="lazy" decoding="async" alt="Cloudbaik">
+  </a>
+</div>
 
 ## Tetap berguna ketika AI gagal
 

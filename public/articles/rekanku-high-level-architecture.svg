@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1280" role="img" aria-labelledby="title description">
+  <title id="title">Arsitektur tingkat tinggi RekanKu bersama SICA</title>
+  <desc id="description">Alur vertikal dari pengguna dan consent, policy gate backend, pemilihan rule-based atau reasoning AI terisolasi, satu misi dan CTA, tindakan pengguna, verifikasi backend, lalu adaptasi misi berikutnya.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="1280" rx="28" fill="#f6f8fb"/>
+  <text x="450" y="62" text-anchor="middle" fill="#07111f" font-family="Plus Jakarta Sans, sans-serif" font-size="38" font-weight="800">RekanKu bersama SICA</text>
+  <text x="450" y="98" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="20">High-level architecture</text>
+
+  <rect x="210" y="138" width="480" height="82" rx="16" fill="#ffffff" stroke="#ccd5df" stroke-width="2"/>
+  <circle cx="260" cy="179" r="22" fill="#12d6c5"/>
+  <path d="M250 180a10 10 0 1 1 20 0M244 199c5-10 27-10 32 0" fill="none" stroke="#07111f" stroke-width="4" stroke-linecap="round"/>
+  <text x="304" y="171" fill="#07111f" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="800">Pengguna Sikotesku</text>
+  <text x="304" y="200" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="18">Memilih dan menjalankan tindakan</text>
+
+  <path d="M450 220V262" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="274" width="600" height="106" rx="16" fill="#e7faf7" stroke="#8dded5" stroke-width="2"/>
+  <text x="450" y="317" text-anchor="middle" fill="#0b4f4a" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="800">Consent + context minimum</text>
+  <text x="450" y="350" text-anchor="middle" fill="#356963" font-family="Plus Jakarta Sans, sans-serif" font-size="18">Status progres yang relevan, tanpa CV atau jawaban mentah</text>
+
+  <path d="M450 380V422" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="434" width="680" height="132" rx="18" fill="#071b3f"/>
+  <text x="450" y="477" text-anchor="middle" fill="#ffffff" font-family="Plus Jakarta Sans, sans-serif" font-size="26" font-weight="800">Backend policy gate</text>
+  <text x="450" y="511" text-anchor="middle" fill="#c8e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="18">Auth • ownership • eligibility • quota</text>
+  <text x="450" y="540" text-anchor="middle" fill="#8edfd7" font-family="Plus Jakarta Sans, sans-serif" font-size="18">Backend tetap menjadi source of truth</text>
+
+  <path d="M450 566V606H245V636" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M450 566V606H655V636" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="648" width="350" height="122" rx="16" fill="#ffffff" stroke="#ccd5df" stroke-width="2"/>
+  <text x="245" y="693" text-anchor="middle" fill="#07111f" font-family="Plus Jakarta Sans, sans-serif" font-size="23" font-weight="800">Rule-based fallback</text>
+  <text x="245" y="727" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="17">Tetap berguna ketika AI gagal</text>
+  <text x="245" y="752" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="17">atau satu pilihan sudah jelas</text>
+
+  <rect x="480" y="648" width="350" height="122" rx="16" fill="#ffffff" stroke="#6dcfc5" stroke-width="2"/>
+  <text x="655" y="693" text-anchor="middle" fill="#07111f" font-family="Plus Jakarta Sans, sans-serif" font-size="23" font-weight="800">Reasoning SICA</text>
+  <text x="655" y="727" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="17">AI terisolasi memilih prioritas</text>
+  <text x="655" y="752" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="17">dari tindakan yang sudah valid</text>
+
+  <path d="M245 770V814H450" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <path d="M655 770V814H450V842" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="854" width="600" height="104" rx="16" fill="#0f766e"/>
+  <text x="450" y="898" text-anchor="middle" fill="#ffffff" font-family="Plus Jakarta Sans, sans-serif" font-size="25" font-weight="800">Satu Mission Brief + satu CTA aman</text>
+  <text x="450" y="932" text-anchor="middle" fill="#d6fffa" font-family="Plus Jakarta Sans, sans-serif" font-size="18">SICA memberi arahan, bukan mengambil alih akun</text>
+
+  <path d="M450 958V1000" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="1012" width="600" height="92" rx="16" fill="#ffffff" stroke="#ccd5df" stroke-width="2"/>
+  <text x="450" y="1050" text-anchor="middle" fill="#07111f" font-family="Plus Jakarta Sans, sans-serif" font-size="23" font-weight="800">Pengguna menyelesaikan fitur Sikotesku</text>
+  <text x="450" y="1080" text-anchor="middle" fill="#516175" font-family="Plus Jakarta Sans, sans-serif" font-size="17">Profil, latihan, CV, interview, atau CPNS</text>
+
+  <path d="M450 1104V1140" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="1152" width="600" height="92" rx="16" fill="#e7faf7" stroke="#8dded5" stroke-width="2"/>
+  <text x="450" y="1190" text-anchor="middle" fill="#0b4f4a" font-family="Plus Jakarta Sans, sans-serif" font-size="23" font-weight="800">Backend memverifikasi completion</text>
+  <text x="450" y="1220" text-anchor="middle" fill="#356963" font-family="Plus Jakarta Sans, sans-serif" font-size="17">Progres berubah → misi berikutnya beradaptasi</text>
+
+  <path d="M150 1198H54V500H96" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+  <text x="39" y="862" transform="rotate(-90 39 862)" text-anchor="middle" fill="#0f766e" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700">Observe lagi dengan progres terbaru</text>
+</svg>

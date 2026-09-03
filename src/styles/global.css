@@ -1217,6 +1217,64 @@ select {
   margin: 0;
 }
 
+.article-diagram {
+  margin: 1.25rem 0 1.75rem;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.article-diagram img {
+  width: 100%;
+  height: auto;
+}
+
+.article-diagram figcaption {
+  padding: 0.7rem 0.85rem 0.8rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-light);
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+.article-brand-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.article-body .article-brand-link {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.article-body .article-brand-link:hover {
+  border-color: #82cfc8;
+  background: #f7fcfb;
+}
+
+.article-body .article-brand-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.article-brand-link img {
+  width: auto;
+  max-width: min(100%, 13rem);
+  height: 2rem;
+  object-fit: contain;
+}
+
 .article-body table {
   display: block;
   width: 100%;

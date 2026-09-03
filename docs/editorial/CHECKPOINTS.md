@@ -40,7 +40,7 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
 | CP-16 | Lengkapi topik psikotes/karier umum bila perlu | selesai | B-012 menambah A-091 sampai A-100; total repo 100 artikel |
 | CP-17 | Audit akhir metadata, tautan, dan cakupan | selesai | 100 file selaras dengan map; metadata, CTA, 243 internal link, PII, dan batas klaim lulus source-only |
 | CP-18 | Sinkronkan cluster CPNS setelah production aktif | selesai | 5 artikel diperbarui, 5 intent baru ditambah; 10 artikel CPNS, FAQ/sumber/schema, route production, dan QA source-only lulus |
-| CP-19 | Publikasikan studi kasus RekanKu untuk AI Hackfest 2026 | selesai | Artikel 1.500+ kata, aset roadmap, backlink wajib, metadata, internal link, dan privacy/overclaim QA lulus |
+| CP-19 | Publikasikan studi kasus RekanKu untuk AI Hackfest 2026 | selesai | Artikel panjang, diagram arsitektur, logo referensi, backlink wajib, metadata, internal link, dan privacy/overclaim QA lulus |
 
 ## Definition of Done Per Artikel
 
@@ -276,9 +276,10 @@ terbit. Status yang dipakai: `belum`, `proses`, `selesai`, atau `ditahan`.
   privacy/legal review tetap belum selesai.
 - Route `/rekanku` merespons HTTP 200 dan menampilkan preview public beta dengan
   akses agent bertahap.
-- A-106 selesai dengan 1.500+ kata, empat FAQ, aset roadmap yang diberikan
-  peserta, serta backlink wajib `AI Hosting` dan `Cloud VPS` masing-masing tepat
-  satu kali.
+- A-106 selesai dengan artikel panjang, empat FAQ, diagram arsitektur tingkat
+  tinggi, logo IDwebhost dan Cloudbaik, serta backlink wajib `AI Hosting` dan
+  `Cloud VPS` masing-masing tepat satu kali. Gambar roadmap lomba dihapus sesuai
+  keputusan editorial terbaru.
 - QA source-only lulus untuk title 51 karakter, description 149 karakter,
   internal link, duplikasi metadata, overclaim, PII, credential, private URL,
   UUID, dan keberadaan aset. Build/test/lint lokal tidak dijalankan sesuai aturan
