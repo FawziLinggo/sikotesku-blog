@@ -1245,7 +1245,7 @@ select {
   margin: 1rem 0 1.5rem;
 }
 
-.article-body .article-brand-link {
+.article-body .article-brand-mark {
   display: flex;
   min-height: 68px;
   align-items: center;
@@ -1254,21 +1254,9 @@ select {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-md);
   background: #ffffff;
-  text-decoration: none;
-  transition: border-color 160ms ease, background-color 160ms ease;
 }
 
-.article-body .article-brand-link:hover {
-  border-color: #82cfc8;
-  background: #f7fcfb;
-}
-
-.article-body .article-brand-link:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--brand) 35%, transparent);
-  outline-offset: 3px;
-}
-
-.article-brand-link img {
+.article-brand-mark img {
   width: auto;
   max-width: min(100%, 13rem);
   height: 2rem;

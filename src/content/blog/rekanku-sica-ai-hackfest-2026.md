@@ -123,12 +123,12 @@ Model tidak menentukan authorization, route bebas, quota, billing, atau status c
 Untuk tim yang membangun agent serupa, kebutuhan infrastrukturnya biasanya terbagi antara lingkungan eksperimen model seperti [AI Hosting](https://idwebhost.com/ai-hosting) dan runtime terisolasi pada [Cloud VPS](https://cloudbaik.com). Namun pilihan vendor bukan pengganti desain keamanan: identitas, izin, data minimum, validasi output, dan source of truth tetap harus dikendalikan aplikasi.
 
 <div class="article-brand-row" aria-label="Referensi layanan infrastruktur">
-  <a class="article-brand-link" href="https://idwebhost.com/ai-hosting" aria-label="Kunjungi AI Hosting dari IDwebhost">
+  <div class="article-brand-mark">
     <img src="/partners/idwebhost.svg" width="195" height="31" loading="lazy" decoding="async" alt="IDwebhost">
-  </a>
-  <a class="article-brand-link" href="https://cloudbaik.com" aria-label="Kunjungi Cloud VPS dari Cloudbaik">
+  </div>
+  <div class="article-brand-mark">
     <img src="/partners/cloudbaik.svg" width="500" height="100" loading="lazy" decoding="async" alt="Cloudbaik">
-  </a>
+  </div>
 </div>
 
 ## Tetap berguna ketika AI gagal
