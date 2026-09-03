@@ -32,8 +32,9 @@ bukan memproduksi halaman tipis demi kata kunci.
 
 Batch B-001 sampai B-011 menambah 80 artikel spesifik Sikotesku. B-012 menambah
 10 artikel gap filler umum. Setelah CPNS aktif di production, B-013 memperbarui
-5 artikel prelaunch dan menambah 5 intent CPNS baru, sehingga repo memiliki 105
-artikel publik.
+5 artikel prelaunch dan menambah 5 intent CPNS baru. B-014 menambahkan artikel
+kompetisi RekanKu untuk AI Hackfest 2026, sehingga repo memiliki 106 artikel
+publik.
 Topiknya mencakup free practice, Mode Battle,
 ranking dan pemegang rekor live, credit dan refund, timer Battle, pemulihan
 koneksi, keypad serta ritme Kraepelin, kategori dan mode Matdas, TIU reguler,
@@ -46,7 +47,9 @@ Hadiah, pembayaran, preferensi email, penghapusan akun, dan Updates.
 Audit source-only awal mencocokkan 100 intent dengan file, memastikan metadata
 unik, CTA HTTPS, kategori valid, serta 243 internal link yang tidak putus.
 Audit setelah B-013 mencakup 105 artikel, 10 artikel CPNS, dan 260 internal link
-valid. Harga, promo, slot, rank, dan benefit tetap diarahkan ke halaman live.
+valid. B-014 menambahkan studi kasus agent RekanKu dengan status beta dan batas
+production yang dinyatakan eksplisit. Harga, promo, slot, rank, dan benefit tetap
+diarahkan ke halaman live.
 Cluster CPNS production sekarang mencakup cara mulai, jenis latihan, diagnostic,
 TWK/TIU/TKP, Matdas numerik, Full SKD, Pass/credit, hasil/ranking, dan Room.
 Status detail per slug ada di

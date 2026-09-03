@@ -50,6 +50,7 @@ mendukung beberapa ide, tetapi setiap klaim produk tetap harus dapat ditelusuri.
 | SRC-034 | Credit flow | `frontend/app/credits/page.tsx`, halaman mode assessment, dan free-practice screen | Saldo per jenis tes terpisah, paket, penggunaan credit pada simulasi lengkap, serta batas free practice | repo | Tinggi/volatil | Jangan mengunci harga; arahkan ke katalog live |
 | SRC-035 | Mobile/PWA | `docs/frontend/PWA.md`, `frontend/features/landing/landingContent.ts`, dan route publik | Penggunaan dari HP, online-first, install opsional, batas offline, dan alur login | repo | Sedang | Jangan menjanjikan pengerjaan tes offline |
 | SRC-036 | CVKu Pakar | `frontend/features/cv-review/components/ExpertCVReviewScreen.tsx` dan live `/cv-review/expert` | Sesi personal 20 menit, jadwal, PDF opsional, consent, credit, dan pembatalan | ganda | Tinggi/volatil | Harga dan slot mengikuti halaman live; jangan membuka data appointment |
+| SRC-037 | RekanKu | `origin/development` pada `docs/rekanku/` dan `backend/frontend` RekanKu; live `/rekanku` | Mission loop, backend verification, fallback, onboarding general/CPNS, privacy boundary, dan preview beta | ganda | Tinggi/volatil | Jangan menyebut rollout production penuh atau akses terbuka untuk semua akun |
 
 ## Aturan Bukti
 

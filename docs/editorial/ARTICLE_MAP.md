@@ -129,6 +129,7 @@ baru tidak dibuat sebelum cukup banyak artikel agar halaman topik tidak tipis.
 | A-103 | CPNS | Pass atau Credit CPNS Sikotesku: mana yang sesuai? | `pass-atau-credit-latihan-cpns` | F-020 | `/cpns/checkout` | ready | Harga dan benefit hanya dari checkout |
 | A-104 | CPNS | Cara membaca hasil, riwayat, dan ranking CPNS Sikotesku | `cara-membaca-hasil-dan-ranking-cpns` | SRC-031 | `/cpns/history` | ready | Bukan ranking resmi seleksi |
 | A-105 | CPNS | Room CPNS Sikotesku: cara kerja, akses, dan ranking | `room-cpns-sikotesku` | F-020,SRC-031 | `/cpns/rooms` | ready | Jangan memuat kode atau identitas peserta |
+| A-106 | Karier | RekanKu bersama SICA: AI yang memverifikasi progres | `rekanku-sica-ai-hackfest-2026` | F-028,SRC-037 | `/rekanku` | ready | Bedakan source development, preview beta, dan rollout production penuh |
 
 ## Status Produksi
 
@@ -139,7 +140,9 @@ baru tidak dibuat sebelum cukup banyak artikel agar halaman topik tidak tipis.
    karier umum setelah seluruh konten produk prioritas selesai.
 5. B-013 menyinkronkan A-058 sampai A-062 dengan status CPNS production dan
    menambah A-101 sampai A-105 sebagai cluster intent lanjutan.
+6. B-014 menambahkan A-106 sebagai artikel kompetisi AI Hackfest 2026 berbasis
+   audit source RekanKu dan status preview public beta.
 
-Peta kini berisi 105 artikel. Penambahan berikutnya harus mengikuti
+Peta kini berisi 106 artikel. Penambahan berikutnya harus mengikuti
 perubahan produk yang sudah publik, kebutuhan pembaca, atau data Search Console;
 jangan menambah halaman tipis hanya untuk mengejar jumlah URL.

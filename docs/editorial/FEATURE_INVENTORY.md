@@ -32,7 +32,7 @@ artikel. Baris ditambahkan hanya setelah ada bukti yang dapat dilacak.
 | F-025 | InterviewKu AI | SRC-022 | `https://sikotesku.com/interview-simulation/ai` | 200 | ya | tinggi | tinggi | Simulator chat, bukan keputusan rekrutmen |
 | F-026 | InterviewKu pakar | SRC-021 | `https://sikotesku.com/interview-simulation` | 200 | ya | sedang | sedang | 30 menit, scope umum/HR |
 | F-027 | TesVerbalKu | SRC-023 | `https://sikotesku.com/tes-verbalku` | 200 | ya | sedang | sedang | Matdas lisan/public speaking, Google Meet |
-| F-028 | RekanKu | `docs/rekanku/SUMMARY.md` | `https://sikotesku.com/rekanku` | 200 | ya, terbatas | tinggi | tinggi | Coming soon/default-off; jangan klaim tersedia |
+| F-028 | RekanKu | SRC-037 | `https://sikotesku.com/rekanku` | 200 | ya, terbatas | tinggi | tinggi | Preview public beta aktif; agent hanya untuk allowlist dan rollout production penuh masih gated |
 | F-029 | Mitra room dan job posting | SRC-024 | `https://sikotesku.com/mitra` dan `/jobs` | 200 | ya | sedang | tinggi | Tenant-scoped; publik hanya lowongan |
 | F-030 | Ajak Teman | SRC-025 | `https://sikotesku.com/ajak-teman` | 200 | ya | tinggi | tinggi | Bonus dan eligibility dapat berubah |
 | F-031 | Leaderboard Ajak Teman | SRC-025 | `https://sikotesku.com/ajak-teman/leaderboard` | 200 | ya, terbatas | tinggi | tinggi | Jangan menyalin nama/posisi snapshot |
